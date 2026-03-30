@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBridge — Turn Any Chat Into a Business Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo">ChatBridge</div>
+        <div class="nav-links">
+            <a href="#how">How It Works</a>
+            <a href="#usecases">Use Cases</a>
+            <a href="#platforms">Platforms</a>
+            <a href="#start" class="nav-cta">Get Started</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Turn Any Chat<br>Into a Platform</h1>
+            <p class="hero-sub">One chat. One backend. Infinite integrations.<br>Build your business on the messenger your customers already use.</p>
+            <div class="hero-buttons">
+                <a href="#how" class="btn btn-primary">How It Works</a>
+                <a href="#usecases" class="btn btn-ghost">See Use Cases</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section section-dark">
+        <div class="container">
+            <span class="label">The Problem</span>
+            <h2>Your tools don't talk to each other</h2>
+            <p class="section-desc">Calendars, trackers, order systems, CRMs, reminders — all in different apps. Your team switches between 8+ tools daily. Your customers download apps they'll never open again.</p>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Apps used daily by the average team</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30%</span>
+                    <span class="stat-label">of work time lost to context switching</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Apps your customers want to install</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light" id="how">
+        <div class="container">
+            <span class="label label-dark">The Architecture</span>
+            <h2 class="dark">Three layers. That's it.</h2>
+            <div class="architecture">
+                <div class="arch-step">
+                    <div class="arch-number">01</div>
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M4 18h40M16 8v10" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="24" cy="30" r="6" stroke="currentColor" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Chat Platform</h3>
+                    <p>Pick the messenger your users already have. WhatsApp, WeChat, Telegram, LINE — doesn't matter. It's just the interface.</p>
+                </div>
+                <div class="arch-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="arch-step">
+                    <div class="arch-number">02</div>
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="6" width="32" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M16 16h16M16 24h16M16 32h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Backend</h3>
+                    <p>A modular engine that understands messages, routes them to the right module, stores data, and triggers automations. Regex first, AI only when needed.</p>
+                </div>
+                <div class="arch-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="arch-step">
+                    <div class="arch-number">03</div>
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="34" cy="14" r="8" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="14" cy="34" r="8" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="34" cy="34" r="8" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M22 14h4M14 22v4M22 34h4M34 22v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>App Integrations</h3>
+                    <p>Calendar, e-commerce, IoT sensors, payments, AI — plug in whatever your use case needs. Each integration is a module. Add or remove without touching the rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Preview -->
+    <section class="section section-dark">
+        <div class="container">
+            <span class="label">Under The Hood</span>
+            <h2>Simple by design</h2>
+            <p class="section-desc">No complex frameworks. No vendor lock-in. Python + SQLite + your preferred chat API. Every feature is a module with three methods.</p>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-title">modules/your_feature/module.py</span>
+                </div>
+<pre><code><span class="kw">class</span> <span class="cls">YourFeature</span>(BaseModule):
+
+    <span class="kw">def</span> <span class="fn">can_handle</span>(self, message) -> bool:
+        <span class="cm"># Does this message belong to your module?</span>
+        <span class="kw">return</span> <span class="str">"keyword"</span> <span class="kw">in</span> message.text.lower()
+
+    <span class="kw">def</span> <span class="fn">handle</span>(self, message) -> Response:
+        <span class="cm"># Process it and return a reply</span>
+        self.db.save(message)
+        <span class="kw">return</span> Response(reply=<span class="str">"Done!"</span>)
+
+    <span class="kw">def</span> <span class="fn">get_scheduled_jobs</span>(self) -> list:
+        <span class="cm"># Automated messages (reminders, reports)</span>
+        <span class="kw">return</span> [ScheduledJob(cron=<span class="str">"0 22 * * *"</span>, func=self.daily_report)]</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section section-light" id="usecases">
+        <div class="container">
+            <span class="label label-dark">Use Cases</span>
+            <h2 class="dark">One pattern. Endless applications.</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-badge">Live</div>
+                    <div class="case-platform">WhatsApp</div>
+                    <h3>Family Hub</h3>
+                    <p>Baby tracker, vitamin reminders, feeding logs, sleep detection, daily health reports — all in the family group chat.</p>
+                    <div class="case-integrations">
+                        <span>Apple Calendar</span>
+                        <span>IoT Sensors</span>
+                        <span>SQLite</span>
+                        <span>DeepSeek AI</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-badge upcoming">Build It</div>
+                    <div class="case-platform">WeChat</div>
+                    <h3>Mini SAP</h3>
+                    <p>Order management, inventory tracking, supplier communication, invoicing — for small manufacturers and sellers on Taobao/1688.</p>
+                    <div class="case-integrations">
+                        <span>Taobao API</span>
+                        <span>1688</span>
+                        <span>Alipay</span>
+                        <span>Inventory DB</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-badge upcoming">Build It</div>
+                    <div class="case-platform">Telegram</div>
+                    <h3>Team Ops</h3>
+                    <p>Project updates, deploy notifications, server monitoring, incident response — DevOps in a group chat.</p>
+                    <div class="case-integrations">
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Grafana</span>
+                        <span>PagerDuty</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-badge upcoming">Build It</div>
+                    <div class="case-platform">LINE</div>
+                    <h3>Clinic Assistant</h3>
+                    <p>Appointment booking, prescription reminders, patient follow-ups, lab result notifications — healthcare via chat.</p>
+                    <div class="case-integrations">
+                        <span>CalDAV</span>
+                        <span>HL7/FHIR</span>
+                        <span>PDF Reports</span>
+                        <span>AI Triage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="section section-dark" id="platforms">
+        <div class="container center">
+            <span class="label">Platforms</span>
+            <h2>Works with the chat your users already have</h2>
+            <div class="platforms-grid">
+                <div class="platform">
+                    <div class="platform-icon whatsapp">WA</div>
+                    <span>WhatsApp</span>
+                    <small>2B+ users</small>
+                </div>
+                <div class="platform">
+                    <div class="platform-icon wechat">We</div>
+                    <span>WeChat</span>
+                    <small>1.3B+ users</small>
+                </div>
+                <div class="platform">
+                    <div class="platform-icon telegram">TG</div>
+                    <span>Telegram</span>
+                    <small>900M+ users</small>
+                </div>
+                <div class="platform">
+                    <div class="platform-icon line">LN</div>
+                    <span>LINE</span>
+                    <small>200M+ users</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost -->
+    <section class="section section-light">
+        <div class="container center">
+            <span class="label label-dark">Cost</span>
+            <h2 class="dark">This costs nothing to run</h2>
+            <p class="section-desc dark">No subscriptions. No per-message fees. No cloud vendor lock-in.</p>
+            <div class="cost-grid">
+                <div class="cost-item">
+                    <span class="cost-value">$0</span>
+                    <span class="cost-label">Chat API</span>
+                    <small>Your own WhatsApp/Telegram account</small>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-value">$0</span>
+                    <span class="cost-label">Server</span>
+                    <small>AWS/Oracle Cloud free tier</small>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-value">$0</span>
+                    <span class="cost-label">AI</span>
+                    <small>DeepSeek API (under $0.01/mo)</small>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-value">$0</span>
+                    <span class="cost-label">Database</span>
+                    <small>SQLite (local, zero config)</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started -->
+    <section class="section section-dark" id="start">
+        <div class="container center">
+            <h2>Build yours in a weekend</h2>
+            <p class="section-desc">The entire Family Hub was built in one session. Fork the repo, swap the modules, deploy to a free VM. Your chat platform is ready.</p>
+            <div class="start-steps">
+                <div class="start-step">
+                    <div class="step-num">1</div>
+                    <h4>Fork & Configure</h4>
+                    <p>Clone the repo. Edit <code>config.yaml</code> to enable the modules you need.</p>
+                </div>
+                <div class="start-step">
+                    <div class="step-num">2</div>
+                    <h4>Add Your Modules</h4>
+                    <p>Each feature = one folder. Implement <code>can_handle()</code>, <code>handle()</code>, done.</p>
+                </div>
+                <div class="start-step">
+                    <div class="step-num">3</div>
+                    <h4>Deploy & Scan</h4>
+                    <p>Push to a free cloud VM. Scan the QR code. Your chat platform is live.</p>
+                </div>
+            </div>
+            <a href="https://github.com/DanKur94" class="btn btn-primary btn-large">View on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">ChatBridge</span>
+                <p>Open source. Zero cost. Built for builders.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/DanKur94">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <p class="footer-copy">&copy; 2026 ChatBridge. Open Source under MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
