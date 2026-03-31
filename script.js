@@ -1,6 +1,10 @@
 // Scroll-based fade-in animations
 document.addEventListener('DOMContentLoaded', () => {
-    const targets = document.querySelectorAll('.stat, .arch-step, .case-card, .cost-item, .start-step, .platform');
+    const targets = document.querySelectorAll(
+        '.stat, .arch-step, .case-card, .cost-item, .start-step, .platform, ' +
+        '.solution-card, .phase-card, .profile-item, .contact-card, ' +
+        '.scenario-card, .process-step'
+    );
     targets.forEach(el => el.classList.add('fade-in'));
 
     const observer = new IntersectionObserver((entries) => {

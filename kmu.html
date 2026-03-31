@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBridge — KMU mit kaputten Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo"><a href="index.html">ChatBridge</a></div>
+        <div class="nav-links">
+            <a href="#szenarien">Szenarien</a>
+            <a href="#ablauf">Ablauf</a>
+            <a href="#kontakt" class="nav-cta">Erstgespräch kostenlos</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero hero-subpage">
+        <div class="hero-content">
+            <a href="index.html" class="back-link">&larr; ChatBridge</a>
+            <h1 class="hero-title">Eure Tools reden<br>nicht miteinander?</h1>
+            <p class="hero-sub">Alles manuell. Zu viel Copy-Paste. Daten in 5 verschiedenen Systemen. Wir verbinden eure Tools — schnell und günstig.</p>
+            <div class="hero-buttons">
+                <a href="#kontakt" class="btn btn-primary">Erstgespräch kostenlos</a>
+                <a href="#szenarien" class="btn btn-ghost">Typische Szenarien</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Szenarien -->
+    <section class="section section-light" id="szenarien">
+        <div class="container">
+            <span class="label label-dark">Typische Szenarien</span>
+            <h2 class="dark">Kommt Ihnen das bekannt vor?</h2>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <span class="scenario-num">01</span>
+                    <h3>Copy-Paste zwischen Systemen</h3>
+                    <p>Kundendaten von der E-Mail ins CRM kopieren. Bestellungen vom Shop ins ERP übertragen. Rechnungen manuell erstellen. Jeden Tag. Wir bauen Bridges zwischen euren Systemen — automatisch, zuverlässig, ohne dass jemand kopieren muss.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">02</span>
+                    <h3>Keine Übersicht</h3>
+                    <p>Wie viele offene Aufträge? Was ist der Umsatz diese Woche? Welcher Kunde wartet am längsten? Daten existieren — aber in verschiedenen Tools. Wir führen alles in einem Dashboard zusammen und schicken tägliche Reports per WhatsApp oder Telegram.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">03</span>
+                    <h3>Automation lohnt sich nicht?</h3>
+                    <p>Jeder weiß: das könnte man automatisieren. Aber der Aufwand ist zu hoch, die IT-Agentur zu teuer, das Projekt zu groß. Wir nutzen AI-Tools und bauen in Tagen was andere in Wochen machen — zu einem Bruchteil der Kosten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section class="section section-dark" id="ablauf">
+        <div class="container">
+            <span class="label">So läuft es ab</span>
+            <h2>Von Problem zu Lösung</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-num">1</div>
+                    <h3>Erstgespräch (kostenlos)</h3>
+                    <p>Wir schauen uns eure Workflows an: Welche Tools nutzt ihr? Wo wird am meisten Zeit verschwendet? Was sind die größten Schmerzpunkte? 1-2 Stunden, unverbindlich.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">2</div>
+                    <h3>Lösung bauen (Festpreis)</h3>
+                    <p>API-Bridges, Chat-Automationen, Dashboards — was immer ihr braucht. Ein Festpreis. Keine versteckten Kosten. Inklusive Einweisung und Support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warum wir -->
+    <section class="section section-light">
+        <div class="container">
+            <span class="label label-dark">Warum wir</span>
+            <h2 class="dark">Schneller und günstiger<br>als eine Agentur</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <h4>AI-Tools als Multiplikator</h4>
+                    <p>Claude, DeepSeek und eigene Automationen — wir liefern in Tagen was klassische Agenturen in Wochen machen.</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Festpreis, keine Überraschungen</h4>
+                    <p>Kein Stundensatz der explodiert. Erst verstehen wir das Problem (kostenlos), dann nennen wir einen Preis.</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Alles aus einer Hand</h4>
+                    <p>Analyse, Entwicklung, Integration, Einweisung — ein Ansprechpartner für alles. Auf Deutsch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section section-dark" id="kontakt">
+        <div class="container center">
+            <span class="label">Kontakt</span>
+            <h2>Erstgespräch kostenlos</h2>
+            <p class="section-desc">Erzählen Sie uns von Ihren Workflows. Wir zeigen Ihnen was möglich ist — unverbindlich.</p>
+            <div class="contact-grid">
+                <a href="mailto:contact@chatbridge.io" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 10l12 8 12-8" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4>E-Mail</h4>
+                    <p>contact@chatbridge.io</p>
+                </a>
+                <a href="https://wa.me/" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.8 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4z" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>+852-XXXX-XXXX</p>
+                </a>
+                <a href="https://calendly.com/chatbridge" class="contact-card" target="_blank" rel="noopener">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="22" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 12h24M10 4v4M22 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h4>Calendly</h4>
+                    <p>Termin buchen</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">ChatBridge</span>
+                <p>Open source. AI-powered service.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Hauptseite</a>
+                <a href="mailto:contact@chatbridge.io">contact@chatbridge.io</a>
+                <a href="https://github.com/DanKur94">GitHub</a>
+            </div>
+        </div>
+        <div class="container">
+            <p class="footer-copy">&copy; 2026 ChatBridge. Open Source under MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
