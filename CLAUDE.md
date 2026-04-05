@@ -28,6 +28,6 @@ Zweck: Glaubwürdig aussehen wenn jemand den Namen googelt.
 - About + Unterseiten: Deutsch (lang="de"), Sprach-Toggle für EN/DE
 
 ## Kontakt-Platzhalter
-- E-Mail: contact@bitsbridge.io
-- WhatsApp: +852-XXXX-XXXX
+- E-Mail: hello@bitsbridge.net
+- WhatsApp: +852 6542 7963
 - LinkedIn: linkedin.com/in/daniel-k-87265221b
