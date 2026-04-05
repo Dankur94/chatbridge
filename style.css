@@ -396,7 +396,15 @@ h2.dark { color: #1d1d1f; }
 .footer { padding: 3rem 2rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
 .footer-logo { font-size: 1.15rem; font-weight: 700; }
-.footer-script { font-family: 'Sacramento', cursive; font-size: 1.1rem; color: rgba(255,255,255,0.35); margin-left: 0.5rem; }
+
+/* === Brand Script (nav + footer) === */
+.brand-wrap { position: relative; display: inline-block; }
+.brand-script {
+    position: absolute; bottom: -0.7rem; right: -2rem;
+    font-family: 'Sacramento', cursive; font-size: 1rem;
+    color: rgba(255,255,255,0.3); white-space: nowrap;
+    pointer-events: none;
+}
 .footer-brand p { margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
