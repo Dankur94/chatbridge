@@ -402,6 +402,7 @@ h2.dark { color: #1d1d1f; }
     font-family: 'Sacramento', cursive; font-size: 1.1rem;
     color: rgba(255,255,255,0.35); margin-left: 0.5rem;
 }
+.nav .brand-script { color: rgba(255,255,255,0.55); }
 .footer-brand p { margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
