@@ -399,7 +399,7 @@ h2.dark { color: #1d1d1f; }
 
 /* === Brand Script (nav + footer) === */
 .brand-script {
-    font-family: 'Sacramento', cursive; font-size: 1.1rem;
+    font-family: 'Sacramento', cursive; font-size: 1.1rem; font-weight: 400;
     color: rgba(255,255,255,0.35); margin-left: 0.5rem;
 }
 .footer-brand p { margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
