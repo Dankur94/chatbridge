@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-title-en="BitsBridge &mdash; Technical Solutions for China Business" data-title-de="BitsBridge &mdash; Technische L&ouml;sungen f&uuml;r China-Gesch&auml;ft">
+<html lang="en" data-title-en="BitsBridge &mdash; We Connect Your Production Data" data-title-de="BitsBridge &mdash; Wir verbinden Ihre Produktionsdaten">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitsBridge &mdash; Technical Solutions for China Business</title>
+    <title>BitsBridge &mdash; We Connect Your Production Data</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,11 +14,14 @@
     <nav class="nav" id="nav">
         <div class="nav-logo">BitsBridge</div>
         <div class="nav-links">
+            <a href="#solution" data-en="Solution" data-de="L&ouml;sung">Solution</a>
+            <a href="#how" data-en="How It Works" data-de="Ablauf">How It Works</a>
             <a href="about.html" data-en="About" data-de="&Uuml;ber uns">About</a>
             <div class="lang-toggle">
                 <button data-lang="en">EN</button>
                 <button data-lang="de">DE</button>
             </div>
+            <a href="#contact" class="nav-cta" data-en="Free Consultation" data-de="Kostenlose Beratung">Free Consultation</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -28,11 +31,11 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title" data-en="BitsBridge" data-de="BitsBridge">BitsBridge</h1>
-            <p class="hero-sub" data-en="Technical solutions for companies with China business.<br>Engineering + software from Germany and Hong Kong." data-de="Technische L&ouml;sungen f&uuml;r Firmen mit China-Gesch&auml;ft.<br>Engineering + Software aus Deutschland und Hong Kong.">Technical solutions for companies with China business.<br>Engineering + software from Germany and Hong Kong.</p>
+            <h1 class="hero-title" data-en="Your Systems Don't<br>Talk to Each Other" data-de="Ihre Systeme reden<br>nicht miteinander">Your Systems Don't<br>Talk to Each Other</h1>
+            <p class="hero-sub" data-en="Machines, ERP, spreadsheets &mdash; your production data lives in disconnected systems. We connect them. You get real-time visibility, less manual work, and fewer errors." data-de="Maschinen, ERP, Tabellen &mdash; Ihre Produktionsdaten leben in getrennten Systemen. Wir verbinden sie. Sie bekommen Echtzeit-&Uuml;berblick, weniger Handarbeit und weniger Fehler.">Machines, ERP, spreadsheets &mdash; your production data lives in disconnected systems. We connect them. You get real-time visibility, less manual work, and fewer errors.</p>
             <div class="hero-buttons">
-                <a href="#team" class="btn btn-primary" data-en="Meet the Team" data-de="Das Team">Meet the Team</a>
-                <a href="#contact" class="btn btn-ghost" data-en="Contact" data-de="Kontakt">Contact</a>
+                <a href="#contact" class="btn btn-primary btn-large" data-en="Book a Free Consultation" data-de="Kostenlose Beratung buchen">Book a Free Consultation</a>
+                <a href="#solution" class="btn btn-ghost btn-large" data-en="See How It Works" data-de="So funktioniert's">See How It Works</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -40,19 +43,157 @@
         </div>
     </section>
 
-    <!-- Team -->
-    <section class="section section-light" id="team">
-        <div class="container center">
-            <span class="label label-dark" data-en="Team" data-de="Team">Team</span>
-            <h2 class="dark" data-en="Two locations. One team." data-de="Zwei Standorte. Ein Team.">Two locations. One team.</h2>
-            <div class="team-grid">
+    <!-- Problem -->
+    <section class="section section-light" id="problem">
+        <div class="container">
+            <span class="label label-dark" data-en="The Problem" data-de="Das Problem">The Problem</span>
+            <h2 class="dark" data-en="This is costing you more<br>than you think" data-de="Das kostet Sie mehr<br>als Sie denken">This is costing you more<br>than you think</h2>
+            <p class="section-desc dark" data-en="Every manufacturing company we talk to has the same issue. The data exists &mdash; but it's trapped in systems that don't communicate." data-de="Jedes Fertigungsunternehmen, mit dem wir sprechen, hat dasselbe Problem. Die Daten existieren &mdash; aber sie stecken in Systemen, die nicht kommunizieren.">Every manufacturing company we talk to has the same issue. The data exists &mdash; but it's trapped in systems that don't communicate.</p>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-en="Manual" data-de="Manuell">Manual</span>
+                    <span class="stat-label" data-en="Machine data copied into Excel by hand. Then from Excel into ERP. Every day." data-de="Maschinendaten per Hand in Excel kopiert. Dann von Excel ins ERP. Jeden Tag.">Machine data copied into Excel by hand. Then from Excel into ERP. Every day.</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-en="Blind" data-de="Blind">Blind</span>
+                    <span class="stat-label" data-en="Nobody knows the current production status without walking to the shop floor or calling someone." data-de="Niemand kennt den aktuellen Produktionsstatus, ohne in die Halle zu laufen oder anzurufen.">Nobody knows the current production status without walking to the shop floor or calling someone.</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-en="Late" data-de="Sp&auml;t">Late</span>
+                    <span class="stat-label" data-en="Problems are discovered hours or days later &mdash; when the damage is already done." data-de="Probleme werden Stunden oder Tage sp&auml;ter entdeckt &mdash; wenn der Schaden bereits entstanden ist.">Problems are discovered hours or days later &mdash; when the damage is already done.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-dark" id="solution">
+        <div class="container">
+            <span class="label" data-en="The Solution" data-de="Die L&ouml;sung">The Solution</span>
+            <h2 data-en="One connected system.<br>Zero manual transfer." data-de="Ein verbundenes System.<br>Null manueller Aufwand.">One connected system.<br>Zero manual transfer.</h2>
+            <p class="section-desc" data-en="We connect your existing machines, ERP, spreadsheets, and cloud tools into one unified data flow. No rip-and-replace &mdash; we work with what you already have." data-de="Wir verbinden Ihre bestehenden Maschinen, ERP, Tabellen und Cloud-Tools in einen einheitlichen Datenfluss. Kein Rip-and-Replace &mdash; wir arbeiten mit dem, was Sie bereits haben.">We connect your existing machines, ERP, spreadsheets, and cloud tools into one unified data flow. No rip-and-replace &mdash; we work with what you already have.</p>
+            <div class="architecture">
+                <div class="arch-step">
+                    <div class="arch-number">01</div>
+                    <h3 data-en="Connect" data-de="Verbinden">Connect</h3>
+                    <p data-en="We link your machines, sensors, and software systems through APIs and edge devices. Data flows automatically &mdash; no more manual transfer." data-de="Wir vernetzen Ihre Maschinen, Sensoren und Softwaresysteme &uuml;ber APIs und Edge-Ger&auml;te. Daten flie&szlig;en automatisch &mdash; kein manueller Transfer mehr.">We link your machines, sensors, and software systems through APIs and edge devices. Data flows automatically &mdash; no more manual transfer.</p>
+                </div>
+                <div class="arch-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="arch-step">
+                    <div class="arch-number">02</div>
+                    <h3 data-en="Automate" data-de="Automatisieren">Automate</h3>
+                    <p data-en="Workflows that used to require human effort run on their own. Reports get generated. Alerts get triggered. Data lands where it belongs." data-de="Workflows, die fr&uuml;her Handarbeit erforderten, laufen von selbst. Berichte werden generiert. Alarme werden ausgel&ouml;st. Daten landen dort, wo sie hingeh&ouml;ren.">Workflows that used to require human effort run on their own. Reports get generated. Alerts get triggered. Data lands where it belongs.</p>
+                </div>
+                <div class="arch-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="arch-step">
+                    <div class="arch-number">03</div>
+                    <h3 data-en="See" data-de="Sehen">See</h3>
+                    <p data-en="Real-time dashboards show what's happening in production right now. Not yesterday. Not after someone compiles a report. Now." data-de="Echtzeit-Dashboards zeigen, was gerade in der Produktion passiert. Nicht gestern. Nicht nachdem jemand einen Bericht erstellt hat. Jetzt.">Real-time dashboards show what's happening in production right now. Not yesterday. Not after someone compiles a report. Now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section section-light" id="cases">
+        <div class="container">
+            <span class="label label-dark" data-en="Use Cases" data-de="Anwendungsf&auml;lle">Use Cases</span>
+            <h2 class="dark" data-en="Real problems we solve" data-de="Echte Probleme, die wir l&ouml;sen">Real problems we solve</h2>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <span class="scenario-num">01</span>
+                    <h3 data-en="Machine Data &rarr; ERP" data-de="Maschinendaten &rarr; ERP">Machine Data &rarr; ERP</h3>
+                    <p data-en="Production data captured automatically from machines and fed directly into your ERP. No more hand-typing counts, run times, or error codes." data-de="Produktionsdaten werden automatisch von Maschinen erfasst und direkt ins ERP &uuml;bertragen. Kein H&auml;ndisches Eintippen von St&uuml;ckzahlen, Laufzeiten oder Fehlercodes mehr.">Production data captured automatically from machines and fed directly into your ERP. No more hand-typing counts, run times, or error codes.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">02</span>
+                    <h3 data-en="Real-Time Production Dashboard" data-de="Echtzeit-Produktions-Dashboard">Real-Time Production Dashboard</h3>
+                    <p data-en="See machine status, output, quality metrics, and OEE in one screen. Accessible from the office, the shop floor, or your phone." data-de="Maschinenstatus, Output, Qualit&auml;tskennzahlen und OEE auf einem Bildschirm. Erreichbar vom B&uuml;ro, der Halle oder Ihrem Handy.">See machine status, output, quality metrics, and OEE in one screen. Accessible from the office, the shop floor, or your phone.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">03</span>
+                    <h3 data-en="Excel &rarr; Cloud" data-de="Excel &rarr; Cloud">Excel &rarr; Cloud</h3>
+                    <p data-en="Replace spreadsheet chaos with a live system your whole team can access. Same data, one source of truth, always up to date." data-de="Ersetzen Sie Tabellen-Chaos durch ein Live-System, auf das Ihr ganzes Team zugreifen kann. Dieselben Daten, eine Quelle der Wahrheit, immer aktuell.">Replace spreadsheet chaos with a live system your whole team can access. Same data, one source of truth, always up to date.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">04</span>
+                    <h3 data-en="Automated Reporting" data-de="Automatisierte Berichte">Automated Reporting</h3>
+                    <p data-en="Daily and weekly production reports generated and delivered automatically. No more hours spent compiling data from five different sources." data-de="T&auml;gliche und w&ouml;chentliche Produktionsberichte werden automatisch generiert und zugestellt. Keine Stunden mehr mit Daten aus f&uuml;nf verschiedenen Quellen zusammentragen.">Daily and weekly production reports generated and delivered automatically. No more hours spent compiling data from five different sources.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-num">05</span>
+                    <h3 data-en="Sensor Integration" data-de="Sensor-Integration">Sensor Integration</h3>
+                    <p data-en="Your machines don't have digital outputs? We provide and install IoT sensors and edge devices to capture the data you need &mdash; temperature, vibration, energy, counts." data-de="Ihre Maschinen haben keine digitalen Ausg&auml;nge? Wir liefern und installieren IoT-Sensoren und Edge-Ger&auml;te, um die Daten zu erfassen, die Sie brauchen &mdash; Temperatur, Vibration, Energie, St&uuml;ckzahlen.">Your machines don't have digital outputs? We provide and install IoT sensors and edge devices to capture the data you need &mdash; temperature, vibration, energy, counts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="section section-dark" id="how">
+        <div class="container">
+            <span class="label" data-en="How It Works" data-de="So arbeiten wir">How It Works</span>
+            <h2 data-en="Structured. Low-risk.<br>Results before commitment." data-de="Strukturiert. Risikoarm.<br>Ergebnisse vor Festlegung.">Structured. Low-risk.<br>Results before commitment.</h2>
+            <div class="process-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="process-step">
+                    <div class="process-num">1</div>
+                    <h3 data-en="Analysis" data-de="Analyse">Analysis</h3>
+                    <p data-en="We map your current systems, data flows, and pain points. You get a clear document showing exactly where time and money is lost. Free, no commitment." data-de="Wir erfassen Ihre aktuellen Systeme, Datenfl&uuml;sse und Schmerzpunkte. Sie erhalten ein klares Dokument, das genau zeigt, wo Zeit und Geld verloren gehen. Kostenlos, unverbindlich.">We map your current systems, data flows, and pain points. You get a clear document showing exactly where time and money is lost. Free, no commitment.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">2</div>
+                    <h3 data-en="Pilot" data-de="Pilot">Pilot</h3>
+                    <p data-en="We connect one process end-to-end. You see real results &mdash; live data, automated workflows &mdash; before committing to anything bigger. Fixed scope, fixed price." data-de="Wir verbinden einen Prozess durchg&auml;ngig. Sie sehen echte Ergebnisse &mdash; Live-Daten, automatisierte Workflows &mdash; bevor Sie sich f&uuml;r etwas Gr&ouml;&szlig;eres entscheiden. Fester Umfang, Festpreis.">We connect one process end-to-end. You see real results &mdash; live data, automated workflows &mdash; before committing to anything bigger. Fixed scope, fixed price.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">3</div>
+                    <h3 data-en="Rollout" data-de="Rollout">Rollout</h3>
+                    <p data-en="We scale the solution across your operation. More machines, more systems, more automation. You already know it works &mdash; now we expand." data-de="Wir skalieren die L&ouml;sung &uuml;ber Ihren Betrieb. Mehr Maschinen, mehr Systeme, mehr Automatisierung. Sie wissen bereits, dass es funktioniert &mdash; jetzt erweitern wir.">We scale the solution across your operation. More machines, more systems, more automation. You already know it works &mdash; now we expand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section section-light" id="why">
+        <div class="container">
+            <span class="label label-dark" data-en="Why BitsBridge" data-de="Warum BitsBridge">Why BitsBridge</span>
+            <h2 class="dark" data-en="Not just software.<br>Not just consulting." data-de="Nicht nur Software.<br>Nicht nur Beratung.">Not just software.<br>Not just consulting.</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <div class="profile-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4l12 7v10l-12 7L4 21V11l12-7z" stroke="currentColor" stroke-width="2"/><path d="M16 4v24M4 11l12 7 12-7" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4 data-en="Engineers, not just developers" data-de="Ingenieure, nicht nur Entwickler">Engineers, not just developers</h4>
+                    <p data-en="We studied mechanical engineering and physics. We understand production processes, machines, and manufacturing &mdash; not just code." data-de="Wir haben Maschinenbau und Physik studiert. Wir verstehen Produktionsprozesse, Maschinen und Fertigung &mdash; nicht nur Code.">We studied mechanical engineering and physics. We understand production processes, machines, and manufacturing &mdash; not just code.</p>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26l7-7 5 5 12-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 10h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h4 data-en="Hardware + software" data-de="Hardware + Software">Hardware + software</h4>
+                    <p data-en="Most IT providers stop at software. We also provide sensors, edge devices, and IoT hardware &mdash; sourced directly from Shenzhen. From the physical sensor to the cloud dashboard." data-de="Die meisten IT-Anbieter h&ouml;ren bei Software auf. Wir liefern auch Sensoren, Edge-Ger&auml;te und IoT-Hardware &mdash; direkt aus Shenzhen. Vom physischen Sensor bis zum Cloud-Dashboard.">Most IT providers stop at software. We also provide sensors, edge devices, and IoT hardware &mdash; sourced directly from Shenzhen. From the physical sensor to the cloud dashboard.</p>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M8 8h16v16H8z" stroke="currentColor" stroke-width="2"/><path d="M4 4h10v10H4z" stroke="currentColor" stroke-width="2"/><path d="M18 18h10v10H18z" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <h4 data-en="We implement, not just advise" data-de="Wir setzen um, nicht nur beraten">We implement, not just advise</h4>
+                    <p data-en="You get a working system, not a slide deck. We build, install, and hand over a solution that runs &mdash; with training and ongoing support." data-de="Sie bekommen ein funktionierendes System, kein Slide Deck. Wir bauen, installieren und &uuml;bergeben eine L&ouml;sung, die l&auml;uft &mdash; mit Einweisung und laufendem Support.">You get a working system, not a slide deck. We build, install, and hand over a solution that runs &mdash; with training and ongoing support.</p>
+                </div>
+            </div>
+            <div class="team-grid" style="margin-top: 3rem;">
                 <a href="about.html#daniel" class="team-card team-card-link">
                     <div class="about-hero-photo">
                         <img src="img/daniel-kurth.jpg" alt="Daniel Kurth">
                     </div>
                     <h3>Daniel Kurth</h3>
                     <p class="team-location" data-en="Hong Kong / Shenzhen" data-de="Hong Kong / Shenzhen">Hong Kong / Shenzhen</p>
-                    <p class="team-desc" data-en="M.Sc. RWTH &mdash; Mechanical Engineering + Business. Software, hardware, China sourcing." data-de="M.Sc. RWTH &mdash; Maschinenbau + BWL. Software, Hardware, China-Sourcing.">M.Sc. RWTH &mdash; Mechanical Engineering + Business. Software, hardware, China sourcing.</p>
+                    <p class="team-desc" data-en="M.Sc. RWTH &mdash; Industrial Engineering. Software, hardware, China sourcing." data-de="M.Sc. RWTH &mdash; Wirtschaftsingenieurwesen. Software, Hardware, China-Sourcing.">M.Sc. RWTH &mdash; Industrial Engineering. Software, hardware, China sourcing.</p>
                     <span class="team-more" data-en="More &rarr;" data-de="Mehr &rarr;">More &rarr;</span>
                 </a>
                 <a href="about.html#ananya" class="team-card team-card-link">
@@ -68,11 +209,12 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact / CTA -->
     <section class="section section-dark" id="contact">
         <div class="container center">
-            <span class="label" data-en="Contact" data-de="Kontakt">Contact</span>
-            <h2 data-en="Get in touch" data-de="Kontakt aufnehmen">Get in touch</h2>
+            <span class="label" data-en="Get Started" data-de="Loslegen">Get Started</span>
+            <h2 data-en="Let's find out where<br>you're losing time" data-de="Finden wir heraus, wo<br>Sie Zeit verlieren">Let's find out where<br>you're losing time</h2>
+            <p class="section-desc" data-en="We'll analyze your current setup and show you exactly where manual work can be eliminated. No cost, no commitment &mdash; just clarity." data-de="Wir analysieren Ihr aktuelles Setup und zeigen Ihnen genau, wo manuelle Arbeit eliminiert werden kann. Keine Kosten, keine Verpflichtung &mdash; nur Klarheit.">We'll analyze your current setup and show you exactly where manual work can be eliminated. No cost, no commitment &mdash; just clarity.</p>
             <div class="contact-grid">
                 <a href="mailto:contact@bitsbridge.io" class="contact-card">
                     <div class="contact-icon">
