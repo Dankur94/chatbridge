@@ -398,12 +398,9 @@ h2.dark { color: #1d1d1f; }
 .footer-logo { font-size: 1.15rem; font-weight: 700; }
 
 /* === Brand Script (nav + footer) === */
-.brand-wrap { position: relative; display: inline-block; }
 .brand-script {
-    position: absolute; bottom: -0.7rem; right: -2rem;
-    font-family: 'Sacramento', cursive; font-size: 1rem;
-    color: rgba(255,255,255,0.3); white-space: nowrap;
-    pointer-events: none;
+    font-family: 'Sacramento', cursive; font-size: 1.1rem;
+    color: rgba(255,255,255,0.35); margin-left: 0.5rem;
 }
 .footer-brand p { margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 .footer-links { display: flex; gap: 2rem; }
