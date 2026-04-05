@@ -10,7 +10,7 @@ img { max-width: 100%; }
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.25rem 3rem;
-    background: rgba(0,0,0,0.8); backdrop-filter: blur(20px);
+    background: #000;
     transition: background 0.3s;
 }
 .nav-logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
@@ -402,7 +402,6 @@ h2.dark { color: #1d1d1f; }
     font-family: 'Sacramento', cursive; font-size: 1.1rem;
     color: rgba(255,255,255,0.35); margin-left: 0.5rem;
 }
-.nav-logo .brand-script { color: rgba(255,255,255,0.45); }
 .footer-brand p { margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
