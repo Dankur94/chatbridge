@@ -431,6 +431,7 @@ h2.dark { color: #1d1d1f; }
 .footer { padding: 3rem 2rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
 .footer-logo { font-size: 1.15rem; font-weight: 700; }
+.footer-logo-img { height: 30px; width: auto; }
 
 /* === Brand Script (nav + footer) === */
 .brand-script {
