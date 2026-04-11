@@ -45,7 +45,7 @@ img { max-width: 100%; }
     background: #000; padding: 6rem 2rem 2rem;
 }
 .hero-logo { width: min(85vw, 800px); height: auto; }
-.hero-brandscript { width: min(45vw, 420px); height: auto; margin-top: -1.5rem; }
+.hero-brandscript { width: min(45vw, 420px); height: auto; margin-top: -3rem; }
 
 /* === Hero === */
 .hero {
