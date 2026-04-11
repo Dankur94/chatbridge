@@ -13,8 +13,10 @@ img { max-width: 100%; }
     background: #000;
     transition: background 0.3s;
 }
-.nav-logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
-.nav-logo a { color: inherit; text-decoration: none; }
+.nav-logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; display: flex; flex-direction: column; align-items: flex-start; }
+.nav-logo a { color: inherit; text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; }
+.nav-logo-img { height: 28px; width: auto; }
+.nav-brandscript-img { height: 10px; width: auto; margin-top: -2px; opacity: 0.4; }
 .nav-links { display: flex; align-items: center; gap: 2.5rem; }
 .nav-links a { font-size: 0.875rem; font-weight: 500; opacity: 0.8; transition: opacity 0.2s; }
 .nav-links a:hover { opacity: 1; }
@@ -431,7 +433,9 @@ h2.dark { color: #1d1d1f; }
 .footer { padding: 3rem 2rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
 .footer-logo { font-size: 1.15rem; font-weight: 700; }
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
 .footer-logo-img { height: 30px; width: auto; }
+.footer-brandscript-img { height: 12px; width: auto; margin-top: 0.25rem; opacity: 0.4; }
 
 /* === Brand Script (nav + footer) === */
 .brand-script {
