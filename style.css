@@ -550,6 +550,12 @@ h2.dark { color: #1d1d1f; }
     .nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .nav-toggle { display: block; }
+    .nav-logo-img { height: 22px; }
+    .nav-brandscript-img { height: 7px; margin-top: -4px; }
+    .logo-section { min-height: 70vh; padding: 4rem 1.5rem 2rem; }
+    .hero-logo { width: min(90vw, 500px); }
+    .hero-brandscript { width: min(55vw, 280px); margin-top: -1.5rem; }
+    .hero-below { padding: 3rem 1.5rem 4rem; }
     .section { padding: 5rem 1.5rem; }
     .stats-grid { grid-template-columns: 1fr; }
     .architecture { flex-direction: column; }
@@ -565,6 +571,7 @@ h2.dark { color: #1d1d1f; }
     .start-steps { grid-template-columns: 1fr; }
     .platforms-grid { gap: 2rem; }
     .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-brand { align-items: center; }
     .hero-subpage { min-height: 60vh; }
 }
 @media (max-width: 480px) {
