@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 40 540 95" role="img">
-  <title>Bits Bridge Logo</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 40 500 95" role="img">
+  <title>BitsBridge Logo</title>
   <defs>
     <clipPath id="cb1">
       <text x="188" y="120" font-size="92px" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" textLength="66" lengthAdjust="spacingAndGlyphs">B</text>
     </clipPath>
     <clipPath id="cb2">
-      <text x="395" y="120" font-size="92px" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" textLength="66" lengthAdjust="spacingAndGlyphs">B</text>
+      <text x="372" y="120" font-size="92px" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" textLength="66" lengthAdjust="spacingAndGlyphs">B</text>
     </clipPath>
   </defs>
   <!-- Binary B in "Bits" -->
@@ -23,14 +23,14 @@
   <text x="254" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">its</text>
   <!-- Binary B in "Bridge" -->
   <g clip-path="url(#cb2)" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#e6e6e6">
-    <text x="389" y="58">01000010 01010010</text>
-    <text x="389" y="69">01001001 01000100</text>
-    <text x="389" y="80">01000111 01000101</text>
-    <text x="389" y="91">01000010 01010010</text>
-    <text x="389" y="102">01001001 01000100</text>
-    <text x="389" y="113">01000111 01000101</text>
-    <text x="389" y="124">01000010 01010010</text>
+    <text x="366" y="58">01000010 01010010</text>
+    <text x="366" y="69">01001001 01000100</text>
+    <text x="366" y="80">01000111 01000101</text>
+    <text x="366" y="91">01000010 01010010</text>
+    <text x="366" y="102">01001001 01000100</text>
+    <text x="366" y="113">01000111 01000101</text>
+    <text x="366" y="124">01000010 01010010</text>
   </g>
   <!-- "ridge" solid -->
-  <text x="461" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">ridge</text>
+  <text x="438" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">ridge</text>
 </svg>
