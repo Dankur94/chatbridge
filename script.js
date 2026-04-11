@@ -75,7 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.toggle('active', btn.dataset.lang === savedLang);
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
-    if (savedLang !== defaultLang) {
-        setLanguage(savedLang);
-    }
+    setLanguage(savedLang);
 });
