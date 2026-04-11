@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="175 45 250 230" role="img">
+  <title>Bits Bridge Logo</title>
+  <defs>
+    <clipPath id="cb1">
+      <text x="188" y="132" font-size="92px" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" textLength="66" lengthAdjust="spacingAndGlyphs">B</text>
+    </clipPath>
+    <clipPath id="cb2">
+      <text x="188" y="253" font-size="92px" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" textLength="66" lengthAdjust="spacingAndGlyphs">B</text>
+    </clipPath>
+  </defs>
+  <!-- Binary B in "Bits" -->
+  <g clip-path="url(#cb1)" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#e6e6e6">
+    <text x="182" y="70">01000010 01001001</text>
+    <text x="182" y="81">01010100 01010011</text>
+    <text x="182" y="92">01000010 01001001</text>
+    <text x="182" y="103">01010100 01010011</text>
+    <text x="182" y="114">01000010 01001001</text>
+    <text x="182" y="125">01010100 01010011</text>
+    <text x="182" y="136">01000010 01001001</text>
+  </g>
+  <!-- "its" solid -->
+  <text x="254" y="132" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">its</text>
+  <!-- Binary B in "Bridge" -->
+  <g clip-path="url(#cb2)" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#e6e6e6">
+    <text x="182" y="192">01000010 01010010</text>
+    <text x="182" y="203">01001001 01000100</text>
+    <text x="182" y="214">01000111 01000101</text>
+    <text x="182" y="225">01000010 01010010</text>
+    <text x="182" y="236">01001001 01000100</text>
+    <text x="182" y="247">01000111 01000101</text>
+    <text x="182" y="258">01000010 01010010</text>
+  </g>
+  <!-- "ridge" solid -->
+  <text x="254" y="253" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">ridge</text>
+</svg>
