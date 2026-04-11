@@ -34,7 +34,7 @@
   <!-- "ridge" solid -->
   <text x="438" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">ridge</text>
   <!-- "operated by Space of Possibilities Ltd" -->
-  <svg x="188" y="128" width="500" height="20" viewBox="-10 70 1470 110" opacity="0.5">
+  <svg x="188" y="128" width="500" height="20" viewBox="-10 70 1470 110">
   <g
      fill="#ffffff"
      fill-opacity="1"
