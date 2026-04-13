@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 72 73">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 90 91">
   <defs>
     <clipPath id="fb">
       <path fill-rule="evenodd" d="M0,0 H40 C56,0 62,8 62,17 C62,26 56,32 44,33.5 C58,35 66,43 66,51 C66,62 56,67 40,67 H0 Z M22,12 V24 H34 C40,24 43,21 43,18 C43,15 40,12 34,12 Z M22,39 V56 H36 C44,56 48,52 48,49.5 C48,46 44,39 36,39 Z"/>
