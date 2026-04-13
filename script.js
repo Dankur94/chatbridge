@@ -17,6 +17,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     targets.forEach(el => observer.observe(el));
 
+    // Story paragraph fade-in with staggered delay
+    const storyFades = document.querySelectorAll('.story-fade');
+    const storyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                storyObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    storyFades.forEach((el, i) => {
+        el.style.transitionDelay = (i * 50) + 'ms';
+        storyObserver.observe(el);
+    });
+
+    // Journey image reveal
+    const journeyPhoto = document.querySelector('.journey-image-col .journey-photo');
+    if (journeyPhoto) {
+        const imgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    imgObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        imgObserver.observe(journeyPhoto);
+
+        // Subtle parallax on journey image
+        const journeyImg = journeyPhoto.querySelector('img');
+        if (journeyImg) {
+            window.addEventListener('scroll', () => {
+                const rect = journeyPhoto.getBoundingClientRect();
+                const viewH = window.innerHeight;
+                if (rect.top < viewH && rect.bottom > 0) {
+                    const progress = (viewH - rect.top) / (viewH + rect.height);
+                    const shift = (progress - 0.5) * -30;
+                    journeyImg.style.transform = 'translateY(' + shift + 'px)';
+                }
+            }, { passive: true });
+        }
+    }
+
     // Nav background on scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
