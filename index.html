@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-title-en="BitsBridge &mdash; Systems Engineering for Your Business" data-title-de="BitsBridge &mdash; Systems Engineering f&uuml;r Ihr Unternehmen">
+<html lang="en" data-title-en="KurthTechnik &mdash; CE Compliance for Chinese Machinery Manufacturers" data-title-de="KurthTechnik &mdash; CE-Konformit&auml;t f&uuml;r chinesische Maschinenhersteller" data-title-zh="KurthTechnik &mdash; 中国机械制造商的CE合规服务">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    <title>BitsBridge &mdash; Systems Engineering for Your Business</title>
+    <title>KurthTechnik &mdash; CE Compliance for Chinese Machinery Manufacturers</title>
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,18 +12,19 @@
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <div class="nav-logo"><a href="index.html"><img src="img/logo.svg" alt="BitsBridge" class="nav-logo-img"></a></div>
+        <div class="nav-logo"><a href="index.html"><img src="img/logo.svg" alt="KurthTechnik" class="nav-logo-img"></a></div>
         <div class="nav-links">
-            <a href="#services" data-en="Services" data-de="Leistungen">Services</a>
-            <a href="#cases" data-en="Use Cases" data-de="Branchen">Use Cases</a>
-            <a href="#why" data-en="Why BitsBridge" data-de="Warum BitsBridge">Why BitsBridge</a>
-            <a href="about.html" data-en="Our Story" data-de="Unsere Geschichte">Our Story</a>
-            <a href="greater-bay-area.html" data-en="Greater Bay Area" data-de="Greater Bay Area">Greater Bay Area</a>
+            <a href="#services" data-en="Services" data-de="Leistungen" data-zh="服务">Services</a>
+            <a href="#cases" data-en="Who We Help" data-de="Unsere Kunden" data-zh="服务对象">Who We Help</a>
+            <a href="#why" data-en="Why KurthTechnik" data-de="Warum KurthTechnik" data-zh="为何选择KurthTechnik">Why KurthTechnik</a>
+            <a href="about.html" data-en="Our Story" data-de="&Uuml;ber uns" data-zh="关于我们">Our Story</a>
+            <a href="greater-bay-area.html" data-en="Greater Bay Area" data-de="Greater Bay Area" data-zh="大湾区">Greater Bay Area</a>
             <div class="lang-toggle">
                 <button data-lang="en">EN</button>
                 <button data-lang="de">DE</button>
+                <button data-lang="zh">中文</button>
             </div>
-            <a href="#contact" class="nav-cta" data-en="Free Consultation" data-de="Kostenlose Beratung">Free Consultation</a>
+            <a href="#contact" class="nav-cta" data-en="Free Compliance Check" data-de="Kostenloser Compliance-Check" data-zh="免费合规检查">Free Compliance Check</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -32,17 +33,38 @@
 
     <!-- Logo Section -->
     <section class="logo-section">
-        <img src="img/logo.svg" alt="BitsBridge" class="hero-logo">
+        <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="150 40 570 115" role="img">
+            <title>KurthTechnik Logo</title>
+            <defs>
+                <clipPath id="ck"><path d="M160,53 H182 V77 L212,53 H236 L200,83 L240,120 H215 L182,89 V120 H160 Z"/></clipPath>
+                <clipPath id="ct"><path d="M396,53 H464 V72 H442 V120 H418 V72 H396 Z"/></clipPath>
+            </defs>
+            <g clip-path="url(#ck)" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#e6e6e6">
+                <text x="154" y="58">01001011 01110101</text><text x="154" y="69">01110010 01110100</text>
+                <text x="154" y="80">01001000 01001011</text><text x="154" y="91">01110101 01110010</text>
+                <text x="154" y="102">01110100 01001000</text><text x="154" y="113">01001011 01110101</text>
+                <text x="154" y="124">01110010 01110100</text>
+            </g>
+            <text x="240" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">urth</text>
+            <g clip-path="url(#ct)" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#e6e6e6">
+                <text x="390" y="58">01010100 01100101</text><text x="390" y="69">01100011 01101000</text>
+                <text x="390" y="80">01101110 01101001</text><text x="390" y="91">01101011 01010100</text>
+                <text x="390" y="102">01100101 01100011</text><text x="390" y="113">01101000 01101110</text>
+                <text x="390" y="124">01101001 01101011</text>
+            </g>
+            <text x="466" y="120" font-size="92" font-weight="900" font-family="'Arial Black',Impact,Haettenschweiler,sans-serif" fill="#e6e6e6">echnik</text>
+        </svg>
+        <img src="img/brand-script.svg?v=5" alt="operated by Space of Possibilities Ltd" class="hero-brandscript">
     </section>
 
     <!-- Hero -->
     <section class="hero hero-below">
         <div class="hero-content">
-            <h1 class="hero-title hero-title-sm" data-en="We understand your process.<br>Then we digitize it." data-de="Wir verstehen Ihren Prozess.<br>Dann digitalisieren wir ihn.">We understand your process.<br>Then we digitize it.</h1>
-            <p class="hero-sub" data-en="An engineer and a physicist who understand your business &mdash; and build the software to improve it. From data source to dashboard, from operations to management report." data-de="Ein Ingenieur und eine Physikerin, die Ihr Gesch&auml;ft verstehen &mdash; und die Software bauen, um es zu verbessern. Von der Datenquelle zum Dashboard, vom Betrieb zum Management-Report.">An engineer and a physicist who understand your business &mdash; and build the software to improve it. From data source to dashboard, from operations to management report.</p>
+            <h1 class="hero-title hero-title-sm" data-en="Selling your machines in Europe?<br>Make them CE-compliant &mdash; before customs sends them back." data-de="Sie verkaufen Ihre Maschinen in Europa?<br>Machen Sie sie CE-konform &mdash; bevor der Zoll sie zur&uuml;ckschickt." data-zh="您的机器要出口欧洲？<br>确保CE合规——别让海关把它们退回来。">Selling your machines in Europe?<br>Make them CE-compliant &mdash; before customs sends them back.</h1>
+            <p class="hero-sub" data-en="An engineer who speaks both your factory and EU regulation. From risk assessment to technical file to the CE mark &mdash; so your machines clear European customs and sell." data-de="Ein Ingenieur, der sowohl Ihre Fabrik als auch die EU-Regulierung versteht. Von der Risikobeurteilung &uuml;ber die technische Dokumentation bis zur CE-Kennzeichnung &mdash; damit Ihre Maschinen den europ&auml;ischen Zoll passieren." data-zh="一位既了解工厂又精通欧盟法规的工程师。从风险评估到技术文件再到CE标志——让您的机器顺利通过欧洲海关并成功销售。">An engineer who speaks both your factory and EU regulation. From risk assessment to technical file to the CE mark &mdash; so your machines clear European customs and sell.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary btn-large" data-en="Book a Free Consultation" data-de="Kostenlose Beratung buchen">Book a Free Consultation</a>
-                <a href="#services" class="btn btn-ghost btn-large" data-en="Our Services" data-de="Unsere Leistungen">Our Services</a>
+                <a href="#contact" class="btn btn-primary btn-large" data-en="Book a Free Compliance Check" data-de="Kostenlosen Compliance-Check buchen" data-zh="预约免费合规检查">Book a Free Compliance Check</a>
+                <a href="#services" class="btn btn-ghost btn-large" data-en="Our Services" data-de="Unsere Leistungen" data-zh="我们的服务">Our Services</a>
             </div>
         </div>
     </section>
@@ -50,21 +72,20 @@
     <!-- Problem -->
     <section class="section section-light" id="problem">
         <div class="container">
-            <span class="label label-dark" data-en="The Problem" data-de="Das Problem">The Problem</span>
-            <h2 class="dark" data-en="This is costing you more<br>than you think" data-de="Das kostet Sie mehr<br>als Sie denken">This is costing you more<br>than you think</h2>
-            <p class="section-desc dark" data-en="Every company we talk to has the same issue. The data exists &mdash; but it's trapped in systems that don't communicate." data-de="Jedes Unternehmen, mit dem wir sprechen, hat dasselbe Problem. Die Daten existieren &mdash; aber sie stecken in Systemen, die nicht kommunizieren.">Every company we talk to has the same issue. The data exists &mdash; but it's trapped in systems that don't communicate.</p>
+            <span class="label label-dark" data-en="The Problem" data-de="Das Problem" data-zh="问题所在">The Problem</span>
+            <h2 class="dark" data-en="Non-compliant machines<br>don't reach Europe." data-de="Nicht-konforme Maschinen<br>erreichen Europa nicht." data-zh="不合规的机器<br>进不了欧洲。">Non-compliant machines<br>don't reach Europe.</h2>
             <div class="stats-grid">
                 <div class="stat">
-                    <span class="stat-number" data-en="Manual" data-de="Manuell">Manual</span>
-                    <span class="stat-label" data-en="Data copied between systems by hand. From email to Excel. From Excel to ERP. Every day." data-de="Daten per Hand zwischen Systemen kopiert. Von E-Mail in Excel. Von Excel ins ERP. Jeden Tag.">Data copied between systems by hand. From email to Excel. From Excel to ERP. Every day.</span>
+                    <span class="stat-number" data-en="Held at the border" data-de="Am Zoll festgehalten" data-zh="被海关扣留">Held at the border</span>
+                    <span class="stat-label" data-en="Machines detained at EU customs because CE documentation doesn't match the new Machinery Regulation." data-de="Maschinen werden am EU-Zoll festgehalten, weil die CE-Dokumentation nicht der neuen Maschinenverordnung entspricht." data-zh="机器在欧盟海关被扣留，因为CE文件不符合新的机械法规要求。">Machines detained at EU customs because CE documentation doesn't match the new Machinery Regulation.</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number" data-en="Blind" data-de="Blind">Blind</span>
-                    <span class="stat-label" data-en="Nobody knows the current status without chasing emails, calling someone, or checking three different systems." data-de="Niemand kennt den aktuellen Stand, ohne E-Mails nachzujagen, anzurufen oder drei verschiedene Systeme zu checken.">Nobody knows the current status without chasing emails, calling someone, or checking three different systems.</span>
+                    <span class="stat-number" data-en="Documentation gaps" data-de="Dokumentationsl&uuml;cken" data-zh="文件缺失">Documentation gaps</span>
+                    <span class="stat-label" data-en="Risk assessments, technical files and declarations that don't meet EU requirements." data-de="Risikobeurteilungen, technische Unterlagen und Konformit&auml;tserkl&auml;rungen, die die EU-Anforderungen nicht erf&uuml;llen." data-zh="风险评估、技术文件和符合性声明不满足欧盟要求。">Risk assessments, technical files and declarations that don't meet EU requirements.</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number" data-en="Late" data-de="Sp&auml;t">Late</span>
-                    <span class="stat-label" data-en="Problems are discovered hours or days later &mdash; when the damage is already done." data-de="Probleme werden Stunden oder Tage sp&auml;ter entdeckt &mdash; wenn der Schaden bereits entstanden ist.">Problems are discovered hours or days later &mdash; when the damage is already done.</span>
+                    <span class="stat-number" data-en="The 2027 deadline" data-de="Die 2027-Frist" data-zh="2027年期限">The 2027 deadline</span>
+                    <span class="stat-label" data-en="The new EU Machinery Regulation (2023/1230) applies from January 2027; old paperwork won't pass." data-de="Die neue EU-Maschinenverordnung (2023/1230) gilt ab Januar 2027; alte Unterlagen werden nicht mehr akzeptiert." data-zh="新的欧盟机械法规 (2023/1230) 将于2027年1月起生效；旧文件将无法通过审查。">The new EU Machinery Regulation (2023/1230) applies from January 2027; old paperwork won't pass.</span>
                 </div>
             </div>
         </div>
@@ -73,84 +94,84 @@
     <!-- Services -->
     <section class="section section-dark" id="services">
         <div class="container">
-            <span class="label" data-en="Our Services" data-de="Unsere Leistungen">Our Services</span>
-            <h2 data-en="From analysis to insight." data-de="Von der Analyse zur Erkenntnis.">From analysis to insight.</h2>
-            <p class="section-desc" data-en="We come from engineering and science &mdash; that's why we understand not just software, but how your business actually works. We translate between operations and system architecture." data-de="Wir kommen aus Technik und Wissenschaft &mdash; deshalb verstehen wir nicht nur Software, sondern auch wie Ihr Gesch&auml;ft tats&auml;chlich funktioniert. Wir &uuml;bersetzen zwischen Betrieb und Systemarchitektur.">We come from engineering and science &mdash; that's why we understand not just software, but how your business actually works. We translate between operations and system architecture.</p>
+            <span class="label" data-en="Our Services" data-de="Unsere Leistungen" data-zh="我们的服务">Our Services</span>
+            <h2 data-en="From assessment to CE mark." data-de="Von der Bewertung bis zur CE-Kennzeichnung." data-zh="从评估到CE标志。">From assessment to CE mark.</h2>
+            <p class="section-desc" data-en="We combine engineering expertise with deep knowledge of EU regulation &mdash; so your documentation meets every requirement." data-de="Wir verbinden ingenieurtechnische Kompetenz mit fundiertem Wissen &uuml;ber EU-Regulierung &mdash; damit Ihre Dokumentation jede Anforderung erf&uuml;llt." data-zh="我们将工程专业知识与对欧盟法规的深入了解相结合——确保您的文件满足每一项要求。">We combine engineering expertise with deep knowledge of EU regulation &mdash; so your documentation meets every requirement.</p>
             <div class="profile-grid profile-grid-dark services-grid-5">
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M16 4l12 7v10l-12 7L4 21V11l12-7z" stroke="currentColor" stroke-width="2"/><path d="M16 4v24M4 11l12 7 12-7" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <h4 data-en="01 &mdash; Technical Assessment" data-de="01 &mdash; Technische Bestandsaufnahme">01 &mdash; Technical Assessment</h4>
-                    <p data-en="We visit your operation and assess where digital solutions create the most value &mdash; based on engineering expertise, not assumptions." data-de="Wir besuchen Ihren Betrieb und bewerten, wo digitale L&ouml;sungen den gr&ouml;&szlig;ten Nutzen schaffen &mdash; auf Basis von Engineering-Expertise, nicht Annahmen.">We visit your operation and assess where digital solutions create the most value &mdash; based on engineering expertise, not assumptions.</p>
+                    <h4 data-en="01 &mdash; CE Gap Analysis" data-de="01 &mdash; CE-L&uuml;ckenanalyse" data-zh="01 &mdash; CE差距分析">01 &mdash; CE Gap Analysis</h4>
+                    <p data-en="We review your existing documentation against EU requirements and show exactly what's missing. Your low-risk first step." data-de="Wir pr&uuml;fen Ihre bestehende Dokumentation gegen EU-Anforderungen und zeigen genau, was fehlt. Ihr risikofreier erster Schritt." data-zh="我们对照欧盟要求审查您现有的文件，准确指出缺失的内容。这是您零风险的第一步。">We review your existing documentation against EU requirements and show exactly what's missing. Your low-risk first step.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="8" r="3" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="8" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="24" r="3" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="24" r="3" stroke="currentColor" stroke-width="2"/><path d="M8.5 10l5 4M23.5 10l-5 4M8.5 22l5-4M23.5 22l-5-4" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-                    <h4 data-en="02 &mdash; Process Analysis" data-de="02 &mdash; Prozessanalyse">02 &mdash; Process Analysis</h4>
-                    <p data-en="We analyze your workflows end-to-end: where does it stall, where is waste, where are decisions based on gut feeling instead of data?" data-de="Wir analysieren Ihre Abl&auml;ufe durchg&auml;ngig: wo stockt es, wo entsteht Verschwendung, wo werden Entscheidungen aus dem Bauch statt aus Daten getroffen?">We analyze your workflows end-to-end: where does it stall, where is waste, where are decisions based on gut feeling instead of data?</p>
+                    <h4 data-en="02 &mdash; Risk Assessment" data-de="02 &mdash; Risikobeurteilung" data-zh="02 &mdash; 风险评估">02 &mdash; Risk Assessment</h4>
+                    <p data-en="Full hazard analysis to ISO 12100 (and ISO 10218 / ISO/TS 15066 for collaborative robots) &mdash; the legal core of CE." data-de="Vollst&auml;ndige Gef&auml;hrdungsanalyse nach ISO 12100 (und ISO 10218 / ISO/TS 15066 f&uuml;r kollaborative Roboter) &mdash; der rechtliche Kern der CE-Kennzeichnung." data-zh="按照ISO 12100进行完整的危险分析（协作机器人还包括ISO 10218 / ISO/TS 15066）——CE合规的法律核心。">Full hazard analysis to ISO 12100 (and ISO 10218 / ISO/TS 15066 for collaborative robots) &mdash; the legal core of CE.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M4 8h24M4 16h24M4 24h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="8" r="2" fill="currentColor"/><circle cx="20" cy="16" r="2" fill="currentColor"/><circle cx="14" cy="24" r="2" fill="currentColor"/></svg>
                     </div>
-                    <h4 data-en="03 &mdash; Requirements Engineering" data-de="03 &mdash; Requirements Engineering">03 &mdash; Requirements Engineering</h4>
-                    <p data-en="We translate what happens on the shop floor into technical specifications &mdash; the bridge between your operations and the right software solution." data-de="Wir &uuml;bersetzen was in der Produktion passiert in technische Spezifikationen &mdash; die Br&uuml;cke zwischen Ihrem Betrieb und der richtigen Software-L&ouml;sung.">We translate what happens on the shop floor into technical specifications &mdash; the bridge between your operations and the right software solution.</p>
+                    <h4 data-en="03 &mdash; Technical Dossier" data-de="03 &mdash; Technische Unterlagen" data-zh="03 &mdash; 技术文件">03 &mdash; Technical Dossier</h4>
+                    <p data-en="We compile and write the complete technical file, so you can issue the Declaration of Conformity and affix CE." data-de="Wir erstellen die vollst&auml;ndigen technischen Unterlagen, damit Sie die Konformit&auml;tserkl&auml;rung ausstellen und die CE-Kennzeichnung anbringen k&ouml;nnen." data-zh="我们编制并撰写完整的技术文件，使您能够签发符合性声明并加贴CE标志。">We compile and write the complete technical file, so you can issue the Declaration of Conformity and affix CE.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M6 16h4l3-8 6 16 3-8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h4 data-en="04 &mdash; System Integration" data-de="04 &mdash; System-Integration">04 &mdash; System Integration</h4>
-                    <p data-en="We connect machines, sensors, and software into one system &mdash; from the physical layer to the dashboard. No gaps, no manual transfer." data-de="Wir verbinden Maschinen, Sensoren und Software zu einem System &mdash; von der physischen Ebene bis zum Dashboard. Keine L&uuml;cken, kein manueller Transfer.">We connect machines, sensors, and software into one system &mdash; from the physical layer to the dashboard. No gaps, no manual transfer.</p>
+                    <h4 data-en="04 &mdash; Ongoing Compliance" data-de="04 &mdash; Laufende Konformit&auml;t" data-zh="04 &mdash; 持续合规">04 &mdash; Ongoing Compliance</h4>
+                    <p data-en="Your dedicated EU-compliance partner for a whole product range, on a fixed monthly basis." data-de="Ihr fester EU-Konformit&auml;tspartner f&uuml;r eine ganze Produktpalette, auf monatlicher Festpreisbasis." data-zh="您的专属欧盟合规伙伴，为您的整个产品线提供固定月费服务。">Your dedicated EU-compliance partner for a whole product range, on a fixed monthly basis.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M4 26l7-7 5 5 12-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 10h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h4 data-en="05 &mdash; Production Intelligence" data-de="05 &mdash; Produktionsintelligenz">05 &mdash; Production Intelligence</h4>
-                    <p data-en="We turn your production data into decisions. Not just dashboards &mdash; real insight into what's working, what's not, and why." data-de="Wir machen aus Ihren Produktionsdaten Entscheidungen. Nicht nur Dashboards &mdash; echte Einblicke was funktioniert, was nicht, und warum.">We turn your production data into decisions. Not just dashboards &mdash; real insight into what's working, what's not, and why.</p>
+                    <h4 data-en="05 &mdash; Training &amp; Workshops" data-de="05 &mdash; Schulungen &amp; Workshops" data-zh="05 &mdash; 培训与研讨会">05 &mdash; Training &amp; Workshops</h4>
+                    <p data-en="We train your engineering and export team on EU requirements &mdash; on-site or online." data-de="Wir schulen Ihr Engineering- und Export-Team zu EU-Anforderungen &mdash; vor Ort oder online." data-zh="我们为您的工程和出口团队提供欧盟法规培训——现场或线上。">We train your engineering and export team on EU requirements &mdash; on-site or online.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
+    <!-- Who We Help -->
     <section class="section section-light" id="cases">
         <div class="container">
-            <span class="label label-dark" data-en="Use Cases" data-de="Anwendungsf&auml;lle">Use Cases</span>
-            <h2 class="dark" data-en="Real problems we solve" data-de="Echte Probleme, die wir l&ouml;sen">Real problems we solve</h2>
+            <span class="label label-dark" data-en="Who We Help" data-de="Unsere Kunden" data-zh="服务对象">Who We Help</span>
+            <h2 class="dark" data-en="Industries we serve" data-de="Branchen, die wir bedienen" data-zh="我们服务的行业">Industries we serve</h2>
             <div class="scenarios-grid">
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="Trading" data-de="Trading">Trading</span>
-                    <h3 data-en="Order Tracking Across Channels" data-de="Bestell-Tracking &uuml;ber alle Kan&auml;le">Order Tracking Across Channels</h3>
-                    <p data-en="Orders from email, WhatsApp, and supplier portals &mdash; tracked in one system. No more lost POs or wrong quantities." data-de="Bestellungen aus E-Mail, WhatsApp und Lieferantenportalen &mdash; in einem System erfasst. Keine verlorenen POs oder falschen Mengen mehr.">Orders from email, WhatsApp, and supplier portals &mdash; tracked in one system. No more lost POs or wrong quantities.</p>
+                    <span class="scenario-num" data-en="Cobots" data-de="Cobots" data-zh="协作机器人">Cobots</span>
+                    <h3 data-en="Collaborative Robot Makers" data-de="Hersteller kollaborativer Roboter" data-zh="协作机器人制造商">Collaborative Robot Makers</h3>
+                    <p data-en="We get your cobots EU-ready. ISO 10218, ISO/TS 15066, risk assessment, and full technical file &mdash; so your robots work safely alongside people in Europe." data-de="Wir machen Ihre Cobots EU-konform. ISO 10218, ISO/TS 15066, Risikobeurteilung und vollst&auml;ndige technische Unterlagen &mdash; damit Ihre Roboter in Europa sicher mit Menschen zusammenarbeiten." data-zh="我们帮您的协作机器人通过欧盟认证。ISO 10218、ISO/TS 15066、风险评估和完整技术文件——让您的机器人在欧洲安全地与人协作。">We get your cobots EU-ready. ISO 10218, ISO/TS 15066, risk assessment, and full technical file &mdash; so your robots work safely alongside people in Europe.</p>
                 </div>
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="Construction" data-de="Bau">Construction</span>
-                    <h3 data-en="Site Updates Without Being On-Site" data-de="Baustellen-Status ohne vor Ort zu sein">Site Updates Without Being On-Site</h3>
-                    <p data-en="Site progress, material orders, and subcontractor reports &mdash; connected in real time. Know what's happening on-site without being on-site." data-de="Baufortschritt, Materialbestellungen und Subunternehmer-Reports &mdash; in Echtzeit verbunden. Wissen was auf der Baustelle passiert, ohne dort zu sein.">Site progress, material orders, and subcontractor reports &mdash; connected in real time. Know what's happening on-site without being on-site.</p>
+                    <span class="scenario-num" data-en="CNC" data-de="CNC" data-zh="数控机床">CNC</span>
+                    <h3 data-en="CNC &amp; Machine-Tool Builders" data-de="CNC- &amp; Werkzeugmaschinenbauer" data-zh="数控机床制造商">CNC &amp; Machine-Tool Builders</h3>
+                    <p data-en="We get your machine tools EU-ready. From lathes to machining centers &mdash; risk assessment and technical file to ISO 12100." data-de="Wir machen Ihre Werkzeugmaschinen EU-konform. Von Drehmaschinen bis Bearbeitungszentren &mdash; Risikobeurteilung und technische Dokumentation nach ISO 12100." data-zh="我们帮您的数控机床通过欧盟认证。从车床到加工中心——按照ISO 12100进行风险评估和技术文件编制。">We get your machine tools EU-ready. From lathes to machining centers &mdash; risk assessment and technical file to ISO 12100.</p>
                 </div>
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="Property" data-de="Immobilien">Property</span>
-                    <h3 data-en="Tenants, Maintenance, Occupancy &mdash; One View" data-de="Mieter, Wartung, Belegung &mdash; eine Ansicht">Tenants, Maintenance, Occupancy &mdash; One View</h3>
-                    <p data-en="Tenant requests, maintenance schedules, and occupancy data &mdash; in one dashboard. Not in 15 different WhatsApp groups." data-de="Mieteranfragen, Wartungspl&auml;ne und Belegungsdaten &mdash; in einem Dashboard. Nicht in 15 verschiedenen WhatsApp-Gruppen.">Tenant requests, maintenance schedules, and occupancy data &mdash; in one dashboard. Not in 15 different WhatsApp groups.</p>
+                    <span class="scenario-num" data-en="Packaging" data-de="Verpackung" data-zh="包装机械">Packaging</span>
+                    <h3 data-en="Packaging &amp; Assembly Machinery" data-de="Verpackungs- &amp; Montagemaschinen" data-zh="包装与装配机械">Packaging &amp; Assembly Machinery</h3>
+                    <p data-en="We get your packaging lines EU-ready. Wrapping, filling, labeling, assembly &mdash; compliant documentation for the full line." data-de="Wir machen Ihre Verpackungslinien EU-konform. Wickeln, Abf&uuml;llen, Etikettieren, Montage &mdash; konforme Dokumentation f&uuml;r die gesamte Linie." data-zh="我们帮您的包装产线通过欧盟认证。裹包、灌装、贴标、装配——为整条产线提供合规文件。">We get your packaging lines EU-ready. Wrapping, filling, labeling, assembly &mdash; compliant documentation for the full line.</p>
                 </div>
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="F&amp;B / Retail" data-de="F&amp;B / Retail">F&amp;B / Retail</span>
-                    <h3 data-en="Inventory &amp; Suppliers &mdash; Synced" data-de="Inventar &amp; Lieferanten &mdash; synchronisiert">Inventory &amp; Suppliers &mdash; Synced</h3>
-                    <p data-en="Inventory, supplier orders, and POS data &mdash; synced automatically. No more counting stock by hand or re-ordering too late." data-de="Inventar, Lieferantenbestellungen und POS-Daten &mdash; automatisch synchronisiert. Kein h&auml;ndisches Bestandsz&auml;hlen oder zu sp&auml;tes Nachbestellen mehr.">Inventory, supplier orders, and POS data &mdash; synced automatically. No more counting stock by hand or re-ordering too late.</p>
+                    <span class="scenario-num" data-en="Automation" data-de="Automation" data-zh="自动化">Automation</span>
+                    <h3 data-en="Industrial Automation / Non-Standard Equipment" data-de="Industrieautomation / Sondermaschinen" data-zh="工业自动化 / 非标设备">Industrial Automation / Non-Standard Equipment</h3>
+                    <p data-en="We get your automation systems EU-ready. Custom machinery, special-purpose equipment, integrated cells &mdash; documented to EU standards." data-de="Wir machen Ihre Automatisierungssysteme EU-konform. Sondermaschinen, Spezialanlagen, integrierte Zellen &mdash; dokumentiert nach EU-Standards." data-zh="我们帮您的自动化系统通过欧盟认证。定制机械、专用设备、集成单元——按照欧盟标准编制文件。">We get your automation systems EU-ready. Custom machinery, special-purpose equipment, integrated cells &mdash; documented to EU standards.</p>
                 </div>
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="Logistics" data-de="Logistik">Logistics</span>
-                    <h3 data-en="Shipments &amp; Customs &mdash; Live Tracking" data-de="Sendungen &amp; Zoll &mdash; Live-Tracking">Shipments &amp; Customs &mdash; Live Tracking</h3>
-                    <p data-en="Shipment status, customs documents, and delivery updates &mdash; tracked live. Your team stops chasing carriers for ETAs." data-de="Sendungsstatus, Zolldokumente und Lieferupdates &mdash; live verfolgt. Ihr Team muss Spediteure nicht mehr nach ETAs jagen.">Shipment status, customs documents, and delivery updates &mdash; tracked live. Your team stops chasing carriers for ETAs.</p>
+                    <span class="scenario-num" data-en="Export" data-de="Export" data-zh="出口贸易">Export</span>
+                    <h3 data-en="Machinery Exporters &amp; Trading Firms" data-de="Maschinenexporteure &amp; Handelsunternehmen" data-zh="机械出口商与贸易公司">Machinery Exporters &amp; Trading Firms</h3>
+                    <p data-en="We get your export documentation EU-ready. You source and sell the machines &mdash; we handle the compliance paperwork." data-de="Wir machen Ihre Exportdokumentation EU-konform. Sie beschaffen und verkaufen die Maschinen &mdash; wir &uuml;bernehmen die Konformit&auml;tsunterlagen." data-zh="我们帮您的出口文件通过欧盟认证。您负责采购和销售机器——我们负责合规文件。">We get your export documentation EU-ready. You source and sell the machines &mdash; we handle the compliance paperwork.</p>
                 </div>
                 <div class="scenario-card">
-                    <span class="scenario-num" data-en="Manufacturing" data-de="Fertigung">Manufacturing</span>
-                    <h3 data-en="Machine Data &rarr; ERP, Automatically" data-de="Maschinendaten &rarr; ERP, automatisch">Machine Data &rarr; ERP, Automatically</h3>
-                    <p data-en="Production data captured from machines and fed directly into your ERP. No more hand-typing counts, run times, or error codes." data-de="Produktionsdaten von Maschinen erfasst und direkt ins ERP &uuml;bertragen. Kein H&auml;ndisches Eintippen von St&uuml;ckzahlen, Laufzeiten oder Fehlercodes mehr.">Production data captured from machines and fed directly into your ERP. No more hand-typing counts, run times, or error codes.</p>
+                    <span class="scenario-num" data-en="Integrators" data-de="Integratoren" data-zh="系统集成">Integrators</span>
+                    <h3 data-en="EU Integrators Sourcing from China" data-de="EU-Integratoren mit China-Beschaffung" data-zh="从中国采购的欧盟系统集成商">EU Integrators Sourcing from China</h3>
+                    <p data-en="We get your sourced machines EU-ready. You integrate Chinese machines into European lines &mdash; we ensure the documentation is complete before shipping." data-de="Wir machen Ihre beschafften Maschinen EU-konform. Sie integrieren chinesische Maschinen in europ&auml;ische Linien &mdash; wir stellen sicher, dass die Dokumentation vor dem Versand vollst&auml;ndig ist." data-zh="我们帮您采购的机器通过欧盟认证。您将中国机器集成到欧洲产线——我们确保发货前文件齐全。">We get your sourced machines EU-ready. You integrate Chinese machines into European lines &mdash; we ensure the documentation is complete before shipping.</p>
                 </div>
             </div>
         </div>
@@ -159,23 +180,23 @@
     <!-- How We Work -->
     <section class="section section-dark" id="how">
         <div class="container">
-            <span class="label" data-en="How It Works" data-de="So arbeiten wir">How It Works</span>
-            <h2 data-en="Structured. Low-risk.<br>Results before commitment." data-de="Strukturiert. Risikoarm.<br>Ergebnisse vor Festlegung.">Structured. Low-risk.<br>Results before commitment.</h2>
+            <span class="label" data-en="How It Works" data-de="So arbeiten wir" data-zh="合作流程">How It Works</span>
+            <h2 data-en="Structured. Low-risk.<br>Results before commitment." data-de="Strukturiert. Risikoarm.<br>Ergebnisse vor Festlegung." data-zh="结构化。低风险。<br>先见成果，再做决定。">Structured. Low-risk.<br>Results before commitment.</h2>
             <div class="process-grid" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="process-step">
                     <div class="process-num">1</div>
-                    <h3 data-en="Analysis" data-de="Analyse">Analysis</h3>
-                    <p data-en="We map your current systems, data flows, and pain points. You get a clear document showing exactly where time and money is lost. Free, no commitment." data-de="Wir erfassen Ihre aktuellen Systeme, Datenfl&uuml;sse und Schmerzpunkte. Sie erhalten ein klares Dokument, das genau zeigt, wo Zeit und Geld verloren gehen. Kostenlos, unverbindlich.">We map your current systems, data flows, and pain points. You get a clear document showing exactly where time and money is lost. Free, no commitment.</p>
+                    <h3 data-en="Gap Analysis" data-de="L&uuml;ckenanalyse" data-zh="差距分析">Gap Analysis</h3>
+                    <p data-en="We map your documentation against EU rules. You get a clear red/amber/green report. Free, no commitment." data-de="Wir gleichen Ihre Dokumentation mit EU-Vorschriften ab. Sie erhalten einen klaren Rot/Gelb/Gr&uuml;n-Bericht. Kostenlos, unverbindlich." data-zh="我们将您的文件与欧盟法规进行对照分析。您将收到一份清晰的红/黄/绿评估报告。免费，无需承诺。">We map your documentation against EU rules. You get a clear red/amber/green report. Free, no commitment.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-num">2</div>
-                    <h3 data-en="Pilot" data-de="Pilot">Pilot</h3>
-                    <p data-en="We connect one process end-to-end. You see real results &mdash; live data, automated workflows &mdash; before committing to anything bigger. Fixed scope, fixed price." data-de="Wir verbinden einen Prozess durchg&auml;ngig. Sie sehen echte Ergebnisse &mdash; Live-Daten, automatisierte Workflows &mdash; bevor Sie sich f&uuml;r etwas Gr&ouml;&szlig;eres entscheiden. Fester Umfang, Festpreis.">We connect one process end-to-end. You see real results &mdash; live data, automated workflows &mdash; before committing to anything bigger. Fixed scope, fixed price.</p>
+                    <h3 data-en="Compliance Project" data-de="Konformit&auml;tsprojekt" data-zh="合规项目">Compliance Project</h3>
+                    <p data-en="We deliver the risk assessment + technical file for your machine. Fixed scope, fixed price." data-de="Wir liefern Risikobeurteilung und technische Unterlagen f&uuml;r Ihre Maschine. Fester Umfang, Festpreis." data-zh="我们为您的机器交付风险评估和技术文件。固定范围，固定价格。">We deliver the risk assessment + technical file for your machine. Fixed scope, fixed price.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-num">3</div>
-                    <h3 data-en="Rollout" data-de="Rollout">Rollout</h3>
-                    <p data-en="We scale the solution across your operation. More teams, more systems, more automation. You already know it works &mdash; now we expand." data-de="Wir skalieren die L&ouml;sung &uuml;ber Ihren Betrieb. Mehr Teams, mehr Systeme, mehr Automatisierung. Sie wissen bereits, dass es funktioniert &mdash; jetzt erweitern wir.">We scale the solution across your operation. More teams, more systems, more automation. You already know it works &mdash; now we expand.</p>
+                    <h3 data-en="Ongoing" data-de="Laufend" data-zh="持续服务">Ongoing</h3>
+                    <p data-en="We keep your whole range compliant as you launch new models." data-de="Wir halten Ihre gesamte Produktpalette konform, wenn Sie neue Modelle einf&uuml;hren." data-zh="当您推出新型号时，我们确保您的整个产品线持续合规。">We keep your whole range compliant as you launch new models.</p>
                 </div>
             </div>
         </div>
@@ -184,29 +205,29 @@
     <!-- Why Us -->
     <section class="section section-light" id="why">
         <div class="container">
-            <span class="label label-dark" data-en="Why BitsBridge" data-de="Warum BitsBridge">Why BitsBridge</span>
-            <h2 class="dark" data-en="Not just software.<br>Not just consulting." data-de="Nicht nur Software.<br>Nicht nur Beratung.">Not just software.<br>Not just consulting.</h2>
+            <span class="label label-dark" data-en="Why KurthTechnik" data-de="Warum KurthTechnik" data-zh="为何选择KurthTechnik">Why KurthTechnik</span>
+            <h2 class="dark" data-en="Your bridge to the<br>EU market." data-de="Ihre Br&uuml;cke zum<br>EU-Markt." data-zh="您通往欧盟市场的<br>桥梁。">Your bridge to the<br>EU market.</h2>
             <div class="profile-grid">
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M16 4l12 7v10l-12 7L4 21V11l12-7z" stroke="currentColor" stroke-width="2"/><path d="M16 4v24M4 11l12 7 12-7" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <h4 data-en="An engineer and a physicist" data-de="Ein Ingenieur und eine Physikerin">An engineer and a physicist</h4>
-                    <p data-en="Not just developers. We come from mechanical engineering and physics &mdash; we understand how things work in the real world. Machines, processes, materials &mdash; not just code." data-de="Nicht nur Entwickler. Wir kommen aus dem Maschinenbau und der Physik &mdash; wir verstehen, wie Dinge in der realen Welt funktionieren. Maschinen, Prozesse, Materialien &mdash; nicht nur Code.">Not just developers. We come from mechanical engineering and physics &mdash; we understand how things work in the real world. Machines, processes, materials &mdash; not just code.</p>
+                    <h4 data-en="German engineer in the Greater Bay Area" data-de="Deutscher Ingenieur in der Greater Bay Area" data-zh="大湾区的德国工程师">German engineer in the Greater Bay Area</h4>
+                    <p data-en="We sit on both sides of the bridge: EU regulatory knowledge + China proximity. We understand your factory and your target market." data-de="Wir sitzen auf beiden Seiten der Br&uuml;cke: EU-Regulierungswissen + N&auml;he zu China. Wir verstehen Ihre Fabrik und Ihren Zielmarkt." data-zh="我们站在桥梁的两端：欧盟法规知识 + 中国现场优势。我们了解您的工厂，也了解您的目标市场。">We sit on both sides of the bridge: EU regulatory knowledge + China proximity. We understand your factory and your target market.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M4 26l7-7 5 5 12-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 10h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h4 data-en="Hardware + software" data-de="Hardware + Software">Hardware + software</h4>
-                    <p data-en="Most IT providers stop at software. We also build the physical layer &mdash; sensors, devices, connectivity. From the machine to the dashboard, everything from one team." data-de="Die meisten IT-Anbieter h&ouml;ren bei Software auf. Wir bauen auch die physische Ebene &mdash; Sensoren, Ger&auml;te, Konnektivit&auml;t. Von der Maschine bis zum Dashboard, alles aus einem Team.">Most IT providers stop at software. We also build the physical layer &mdash; sensors, devices, connectivity. From the machine to the dashboard, everything from one team.</p>
+                    <h4 data-en="We read the datasheet AND the regulation" data-de="Wir lesen das Datenblatt UND die Verordnung" data-zh="我们既懂数据表也懂法规">We read the datasheet AND the regulation</h4>
+                    <p data-en="An engineer who understands the machine and the law, not just paperwork. We speak your technical language." data-de="Ein Ingenieur, der die Maschine und das Gesetz versteht, nicht nur Papierkram. Wir sprechen Ihre technische Sprache." data-zh="一位既了解机器又精通法律的工程师，而不只是处理文书。我们说您的技术语言。">An engineer who understands the machine and the law, not just paperwork. We speak your technical language.</p>
                 </div>
                 <div class="profile-item">
                     <div class="profile-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M8 8h16v16H8z" stroke="currentColor" stroke-width="2"/><path d="M4 4h10v10H4z" stroke="currentColor" stroke-width="2"/><path d="M18 18h10v10H18z" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <h4 data-en="We implement, not just advise" data-de="Wir setzen um, nicht nur beraten">We implement, not just advise</h4>
-                    <p data-en="You get a working system, not a slide deck. We build, install, and hand over a solution that runs &mdash; with training and ongoing support." data-de="Sie bekommen ein funktionierendes System, kein Slide Deck. Wir bauen, installieren und &uuml;bergeben eine L&ouml;sung, die l&auml;uft &mdash; mit Einweisung und laufendem Support.">You get a working system, not a slide deck. We build, install, and hand over a solution that runs &mdash; with training and ongoing support.</p>
+                    <h4 data-en="End-to-end, to the CE mark" data-de="Von A bis Z, bis zur CE-Kennzeichnung" data-zh="端到端，直到CE标志">End-to-end, to the CE mark</h4>
+                    <p data-en="We prepare everything and bridge you to the notified body where needed. A compliant machine, not a slide deck." data-de="Wir bereiten alles vor und vermitteln Sie bei Bedarf an die benannte Stelle. Eine konforme Maschine, kein Foliensatz." data-zh="我们准备所有材料，并在需要时为您对接公告机构。交付的是合规的机器，而不是PPT。">We prepare everything and bridge you to the notified body where needed. A compliant machine, not a slide deck.</p>
                 </div>
             </div>
         </div>
@@ -222,22 +243,22 @@
                     </div>
                 </div>
                 <div class="member-info">
-                    <span class="label" data-en="Founder &amp; Technical Lead" data-de="Gr&uuml;nder &amp; technische Leitung">Founder &amp; Technical Lead</span>
-                    <h2 data-en="Daniel Kurth" data-de="Daniel Kurth">Daniel Kurth</h2>
-                    <p class="member-degree" data-en="B.Sc. RWTH Business Administration and Mechanical Engineering" data-de="B.Sc. RWTH Wirtschaftsingenieurwesen (Maschinenbau)">B.Sc. RWTH Business Administration and Mechanical Engineering</p>
-                    <p class="member-degree" data-en="Specialized in Production Engineering" data-de="Vertiefung Fertigungstechnik">Specialized in Production Engineering</p>
+                    <span class="label" data-en="Founder &amp; Technical Lead" data-de="Gr&uuml;nder &amp; technische Leitung" data-zh="创始人兼技术总监">Founder &amp; Technical Lead</span>
+                    <h2 data-en="Daniel Kurth" data-de="Daniel Kurth" data-zh="Daniel Kurth">Daniel Kurth</h2>
+                    <p class="member-degree" data-en="B.Sc. RWTH Business Administration and Mechanical Engineering" data-de="B.Sc. RWTH Wirtschaftsingenieurwesen (Maschinenbau)" data-zh="亚琛工业大学经济工程学（机械工程方向）学士">B.Sc. RWTH Business Administration and Mechanical Engineering</p>
+                    <p class="member-degree" data-en="Machinery Safety &amp; CE Compliance &mdash; EU Machinery Regulation 2023/1230, ISO 12100 / 10218" data-de="Maschinensicherheit &amp; CE-Konformit&auml;t &mdash; EU-Maschinenverordnung 2023/1230, ISO 12100 / 10218" data-zh="机械安全与CE合规——欧盟机械法规 2023/1230、ISO 12100 / 10218">Machinery Safety &amp; CE Compliance &mdash; EU Machinery Regulation 2023/1230, ISO 12100 / 10218</p>
                     <dl class="detail-list detail-list-dark">
                         <div class="detail-row">
-                            <dt data-en="Location" data-de="Standort">Location</dt>
-                            <dd data-en="Hong Kong, China&lt;br&gt;&lt;a href=&quot;greater-bay-area.html&quot; style=&quot;color: inherit; text-decoration: underline;&quot;&gt;Greater Bay Area&lt;/a&gt;" data-de="Hong Kong, China&lt;br&gt;&lt;a href=&quot;greater-bay-area.html&quot; style=&quot;color: inherit; text-decoration: underline;&quot;&gt;Greater Bay Area&lt;/a&gt;">Hong Kong, China<br><a href="greater-bay-area.html" style="color: inherit; text-decoration: underline;">Greater Bay Area</a></dd>
+                            <dt data-en="Location" data-de="Standort" data-zh="所在地">Location</dt>
+                            <dd data-en="Hong Kong, China&lt;br&gt;&lt;a href=&quot;greater-bay-area.html&quot; style=&quot;color: inherit; text-decoration: underline;&quot;&gt;Greater Bay Area&lt;/a&gt;" data-de="Hong Kong, China&lt;br&gt;&lt;a href=&quot;greater-bay-area.html&quot; style=&quot;color: inherit; text-decoration: underline;&quot;&gt;Greater Bay Area&lt;/a&gt;" data-zh="中国香港&lt;br&gt;&lt;a href=&quot;greater-bay-area.html&quot; style=&quot;color: inherit; text-decoration: underline;&quot;&gt;大湾区&lt;/a&gt;">Hong Kong, China<br><a href="greater-bay-area.html" style="color: inherit; text-decoration: underline;">Greater Bay Area</a></dd>
                         </div>
                         <div class="detail-row">
-                            <dt data-en="Languages" data-de="Sprachen">Languages</dt>
-                            <dd data-en="German &middot; English" data-de="Deutsch &middot; Englisch">German &middot; English</dd>
+                            <dt data-en="Languages" data-de="Sprachen" data-zh="语言">Languages</dt>
+                            <dd data-en="German &middot; English" data-de="Deutsch &middot; Englisch" data-zh="德语 &middot; 英语">German &middot; English</dd>
                         </div>
                         <div class="detail-row">
-                            <dt data-en="Contact" data-de="Kontakt">Contact</dt>
-                            <dd><a href="mailto:d.kurth@bitsbridge.net" style="color: inherit; text-decoration: underline;">d.kurth@bitsbridge.net</a></dd>
+                            <dt data-en="Contact" data-de="Kontakt" data-zh="联系方式">Contact</dt>
+                            <dd><a href="mailto:d.kurth@kurthtechnik.de" style="color: inherit; text-decoration: underline;">d.kurth@kurthtechnik.de</a></dd>
                         </div>
                     </dl>
                 </div>
@@ -255,22 +276,23 @@
                     </div>
                 </div>
                 <div class="member-info">
-                    <span class="label label-dark" data-en="Co-Founder &amp; Scientific Advisor" data-de="Co-Founder &amp; Wissenschaftliche Beratung">Co-Founder &amp; Scientific Advisor</span>
-                    <h2 class="dark" data-en="Ananya Singh" data-de="Ananya Singh">Ananya Singh</h2>
-                    <p class="member-degree" data-en="Researcher (Experimental Condensed Matter Physics)" data-de="Forscherin (Experimentelle Festk&ouml;rperphysik)">Researcher (Experimental Condensed Matter Physics)</p>
-                    <p class="member-degree" data-en="M.Sc. RWTH Theoretical Physics and Experimental Physics" data-de="M.Sc. RWTH Theoretische Physik und Experimentalphysik">M.Sc. RWTH Theoretical Physics and Experimental Physics</p>
+                    <span class="label label-dark" data-en="Scientific Advisor" data-de="Wissenschaftliche Beratung" data-zh="科学顾问">Scientific Advisor</span>
+                    <h2 class="dark" data-en="Ananya Singh" data-de="Ananya Singh" data-zh="Ananya Singh">Ananya Singh</h2>
+                    <p class="member-degree" data-en="PhD Candidate in Condensed Matter Physics, RWTH Aachen University" data-de="Doktorandin in Festk&ouml;rperphysik, RWTH Aachen University" data-zh="亚琛工业大学凝聚态物理学博士候选人">PhD Candidate in Condensed Matter Physics, RWTH Aachen University</p>
+                    <p class="member-degree" data-en="M.Sc. RWTH Experimental Physics" data-de="M.Sc. RWTH Experimentalphysik" data-zh="亚琛工业大学实验物理学硕士">M.Sc. RWTH Experimental Physics</p>
+                    <p class="member-degree" data-en="M.Sc. RWTH Theoretical Physics" data-de="M.Sc. RWTH Theoretische Physik" data-zh="亚琛工业大学理论物理学硕士">M.Sc. RWTH Theoretical Physics</p>
                     <dl class="detail-list">
                         <div class="detail-row">
-                            <dt data-en="Location" data-de="Standort">Location</dt>
-                            <dd data-en="Aachen, Germany&lt;br&gt;DACH" data-de="Aachen, Deutschland&lt;br&gt;DACH">Aachen, Germany<br>DACH</dd>
+                            <dt data-en="Location" data-de="Standort" data-zh="所在地">Location</dt>
+                            <dd data-en="Aachen, Germany&lt;br&gt;DACH" data-de="Aachen, Deutschland&lt;br&gt;DACH" data-zh="德国亚琛&lt;br&gt;DACH地区">Aachen, Germany<br>DACH</dd>
                         </div>
                         <div class="detail-row">
-                            <dt data-en="Languages" data-de="Sprachen">Languages</dt>
-                            <dd data-en="English" data-de="Englisch">English</dd>
+                            <dt data-en="Languages" data-de="Sprachen" data-zh="语言">Languages</dt>
+                            <dd data-en="English" data-de="Englisch" data-zh="英语">English</dd>
                         </div>
                         <div class="detail-row">
-                            <dt data-en="Contact" data-de="Kontakt">Contact</dt>
-                            <dd><a href="mailto:a.singh@bitsbridge.net" style="color: inherit; text-decoration: underline;">a.singh@bitsbridge.net</a></dd>
+                            <dt data-en="Contact" data-de="Kontakt" data-zh="联系方式">Contact</dt>
+                            <dd><a href="mailto:a.singh@kurthtechnik.de" style="color: inherit; text-decoration: underline;">a.singh@kurthtechnik.de</a></dd>
                         </div>
                     </dl>
                 </div>
@@ -281,17 +303,25 @@
     <!-- Contact / CTA -->
     <section class="section section-dark" id="contact">
         <div class="container center">
-            <span class="label" data-en="Get Started" data-de="Loslegen">Get Started</span>
-            <h2 data-en="Let's find out where<br>you're losing time" data-de="Finden wir heraus, wo<br>Sie Zeit verlieren">Let's find out where<br>you're losing time</h2>
-            <p class="section-desc" data-en="We'll analyze your current setup and show you exactly where manual work can be eliminated. No cost, no commitment &mdash; just clarity." data-de="Wir analysieren Ihr aktuelles Setup und zeigen Ihnen genau, wo manuelle Arbeit eliminiert werden kann. Keine Kosten, keine Verpflichtung &mdash; nur Klarheit.">We'll analyze your current setup and show you exactly where manual work can be eliminated. No cost, no commitment &mdash; just clarity.</p>
-            <div class="contact-grid">
-                <a href="mailto:hello@bitsbridge.net" class="contact-card">
+            <span class="label" data-en="Get Started" data-de="Loslegen" data-zh="开始合作">Get Started</span>
+            <h2 data-en="Find out if your machines<br>are EU-ready." data-de="Finden Sie heraus, ob Ihre<br>Maschinen EU-konform sind." data-zh="了解您的机器<br>是否符合欧盟要求。">Find out if your machines<br>are EU-ready.</h2>
+            <p class="section-desc" data-en="We'll check your documentation against the EU Machinery Regulation and show exactly what's missing. No cost, no commitment." data-de="Wir pr&uuml;fen Ihre Dokumentation gegen die EU-Maschinenverordnung und zeigen genau, was fehlt. Keine Kosten, keine Verpflichtung." data-zh="我们将对照欧盟机械法规检查您的文件，并准确指出缺失的内容。免费，无需承诺。">We'll check your documentation against the EU Machinery Regulation and show exactly what's missing. No cost, no commitment.</p>
+            <div class="contact-grid" style="max-width: 900px;">
+                <a href="mailto:hello@kurthtechnik.de" class="contact-card">
                     <div class="contact-icon">
                         <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 10l12 8 12-8" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <h4 data-en="Email" data-de="E-Mail">Email</h4>
-                    <p>hello@bitsbridge.net</p>
+                    <h4 data-en="Email" data-de="E-Mail" data-zh="电子邮件">Email</h4>
+                    <p>hello@kurthtechnik.de</p>
                 </a>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M12.5 5C7.8 5 4 8.1 4 12c0 2.2 1.2 4.1 3.1 5.5l-.8 2.4 2.8-1.4c.9.3 1.8.4 2.8.4.3 0 .6 0 .9-.1-.2-.6-.3-1.3-.3-2 0-4.4 4-7.9 8.9-7.9.3 0 .6 0 .9.1C19.6 6.6 16.3 5 12.5 5zm-2 5.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm5 0a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill="currentColor"/><path d="M28 17.4c0-3.3-3.4-6-7.5-6s-7.5 2.7-7.5 6 3.4 6 7.5 6c.8 0 1.6-.1 2.3-.3l2.2 1.1-.6-1.9c1.6-1.2 2.6-2.9 2.6-4.9zm-9.5-1a1 1 0 110 2 1 1 0 010-2zm5 0a1 1 0 110 2 1 1 0 010-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h4>WeChat</h4>
+                    <p data-en="ID: kurthtechnik" data-de="ID: kurthtechnik" data-zh="微信号: kurthtechnik">ID: kurthtechnik</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: rgba(255,255,255,0.3);" data-en="[QR code placeholder]" data-de="[QR-Code Platzhalter]" data-zh="[二维码占位]">[QR code placeholder]</p>
+                </div>
                 <a href="https://wa.me/85265427963" class="contact-card">
                     <div class="contact-icon">
                         <svg viewBox="0 0 32 32" fill="none"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.84-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z" stroke="currentColor" stroke-width="1.8"/><path d="M20.5 18.5c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" fill="currentColor"/></svg>
@@ -307,18 +337,18 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <img src="img/logo.svg" alt="BitsBridge" class="footer-logo-img">
+                <img src="img/logo.svg" alt="KurthTechnik" class="footer-logo-img"><img src="img/brand-script.svg" alt="operated by Space of Possibilities Ltd" class="footer-brandscript-img">
             </div>
             <div class="footer-links">
-                <a href="about.html" data-en="Our Story" data-de="Unsere Geschichte">Our Story</a>
-                <a href="impressum.html" data-en="Legal Notice" data-de="Impressum">Legal Notice</a>
-                <a href="privacy.html" data-en="Privacy Policy" data-de="Datenschutz">Privacy Policy</a>
-                <a href="mailto:hello@bitsbridge.net">hello@bitsbridge.net</a>
+                <a href="about.html" data-en="Our Story" data-de="&Uuml;ber uns" data-zh="关于我们">Our Story</a>
+                <a href="impressum.html" data-en="Legal Notice" data-de="Impressum" data-zh="法律声明">Legal Notice</a>
+                <a href="privacy.html" data-en="Privacy Policy" data-de="Datenschutz" data-zh="隐私政策">Privacy Policy</a>
+                <a href="mailto:hello@kurthtechnik.de">hello@kurthtechnik.de</a>
             </div>
         </div>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <p class="footer-copy">&copy; 2025 Space of Possibilities Limited &middot; Hong Kong</p>
-            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.15);">v3.9</span>
+            <span style="font-size: 0.65rem; color: rgba(255,255,255,0.15);">v5.0</span>
         </div>
     </footer>
 

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHK Outreach Tracker — KurthTechnik</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#e0e0e0;min-height:100vh}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#111}
+::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#555}
+
+/* Header */
+.header{background:#111;border-bottom:1px solid #222;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.header h1{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:#fff}
+.header h1 span{color:#888;font-weight:400;font-size:.85rem;margin-left:.5rem}
+.header-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* Buttons */
+.btn{padding:.5rem 1rem;border:1px solid #333;background:#1a1a1a;color:#ccc;border-radius:6px;cursor:pointer;font-size:.8rem;font-family:inherit;transition:all .15s}
+.btn:hover{background:#252525;border-color:#444;color:#fff}
+.btn-primary{background:#2563eb;border-color:#2563eb;color:#fff}
+.btn-primary:hover{background:#1d4ed8}
+.btn-danger{background:#dc2626;border-color:#dc2626;color:#fff}
+.btn-danger:hover{background:#b91c1c}
+.btn-sm{padding:.35rem .7rem;font-size:.75rem}
+
+/* Dashboard */
+.dashboard{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:1rem;padding:1.5rem 2rem}
+.stat-card{background:#151515;border:1px solid #222;border-radius:8px;padding:1rem 1.25rem;text-align:center}
+.stat-card .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#666;margin-bottom:.35rem}
+.stat-card .value{font-size:1.5rem;font-weight:700;color:#fff}
+.stat-card .value.green{color:#22c55e}
+.stat-card .value.blue{color:#3b82f6}
+.stat-card .value.amber{color:#f59e0b}
+.stat-card .value.red{color:#ef4444}
+
+/* Progress bar */
+.progress-section{padding:0 2rem 1rem}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.progress-header span{font-size:.8rem;color:#888}
+.progress-header strong{color:#fff;font-size:.9rem}
+.progress-bar{height:8px;background:#1a1a1a;border-radius:4px;overflow:hidden;border:1px solid #222}
+.progress-fill{height:100%;background:linear-gradient(90deg,#2563eb,#22c55e);border-radius:4px;transition:width .3s}
+
+/* Streak */
+.streak-badge{display:inline-flex;align-items:center;gap:.35rem;background:#1a1a1a;border:1px solid #333;border-radius:20px;padding:.3rem .8rem;font-size:.75rem;color:#f59e0b}
+
+/* Controls */
+.controls{padding:.75rem 2rem;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;border-bottom:1px solid #1a1a1a}
+.search-input{background:#151515;border:1px solid #222;color:#e0e0e0;padding:.45rem .75rem;border-radius:6px;font-size:.8rem;font-family:inherit;width:220px}
+.search-input:focus{outline:none;border-color:#2563eb}
+.filter-select{background:#151515;border:1px solid #222;color:#e0e0e0;padding:.45rem .6rem;border-radius:6px;font-size:.8rem;font-family:inherit;cursor:pointer}
+.filter-select:focus{outline:none;border-color:#2563eb}
+.controls .spacer{flex:1}
+
+/* Table */
+.table-wrap{overflow-x:auto;padding:0 2rem 2rem}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+thead th{position:sticky;top:0;background:#111;border-bottom:2px solid #222;padding:.6rem .5rem;text-align:left;font-weight:600;color:#888;text-transform:uppercase;font-size:.7rem;letter-spacing:.05em;cursor:pointer;user-select:none;white-space:nowrap}
+thead th:hover{color:#ccc}
+thead th .sort-arrow{margin-left:.25rem;font-size:.6rem}
+tbody tr{border-bottom:1px solid #1a1a1a;transition:background .1s}
+tbody tr:hover{background:#151515}
+td{padding:.5rem;vertical-align:middle}
+td.company{font-weight:600;color:#fff;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+td.location{color:#999;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Status badges */
+.badge{display:inline-block;padding:.2rem .55rem;border-radius:4px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.badge-new{background:#333;color:#999}
+.badge-researched{background:#1e3a5f;color:#60a5fa}
+.badge-emailed{background:#1e3a8a;color:#93c5fd}
+.badge-followed-up{background:#4c1d95;color:#c4b5fd}
+.badge-replied{background:#14532d;color:#4ade80}
+.badge-meeting{background:#422006;color:#fbbf24}
+.badge-closed{background:#052e16;color:#22c55e}
+.badge-skip{background:#450a0a;color:#f87171}
+
+/* Inline editable */
+.editable{background:transparent;border:1px solid transparent;color:#ccc;padding:.2rem .35rem;border-radius:4px;font-size:.78rem;font-family:inherit;width:100%;min-width:80px}
+.editable:hover{border-color:#333}
+.editable:focus{outline:none;border-color:#2563eb;background:#151515;color:#fff}
+.status-select{background:#151515;border:1px solid #333;color:#ccc;padding:.2rem .35rem;border-radius:4px;font-size:.75rem;font-family:inherit;cursor:pointer}
+.status-select:focus{outline:none;border-color:#2563eb}
+
+/* Action buttons in table */
+.action-btns{display:flex;gap:.3rem;white-space:nowrap}
+
+/* Tabs */
+.tabs{display:flex;border-bottom:1px solid #222;padding:0 2rem}
+.tab{padding:.6rem 1.2rem;font-size:.8rem;color:#666;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-family:inherit;background:none;border-top:none;border-left:none;border-right:none}
+.tab:hover{color:#ccc}
+.tab.active{color:#fff;border-bottom-color:#2563eb}
+
+/* Template panel */
+.templates-panel{padding:1.5rem 2rem;display:none}
+.templates-panel.active{display:block}
+.template-card{background:#151515;border:1px solid #222;border-radius:8px;padding:1.25rem;margin-bottom:1rem}
+.template-card h3{font-size:.9rem;margin-bottom:.5rem;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.template-card textarea{width:100%;background:#0a0a0a;border:1px solid #222;color:#ccc;padding:.75rem;border-radius:6px;font-family:inherit;font-size:.8rem;resize:vertical;min-height:100px;line-height:1.5}
+.template-card textarea:focus{outline:none;border-color:#2563eb}
+.template-actions{display:flex;gap:.5rem;margin-top:.5rem}
+
+/* Import panel */
+.import-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;text-align:center;gap:1.5rem}
+.import-panel h2{font-size:1.5rem;color:#fff}
+.import-panel p{color:#888;font-size:.9rem;max-width:400px}
+.import-panel .file-drop{border:2px dashed #333;border-radius:12px;padding:3rem;cursor:pointer;transition:all .2s;width:100%;max-width:500px}
+.import-panel .file-drop:hover{border-color:#2563eb;background:#111}
+.import-panel .file-drop.dragover{border-color:#22c55e;background:#0a1a0a}
+.import-panel input[type=file]{display:none}
+
+/* Pagination */
+.pagination{display:flex;justify-content:center;align-items:center;gap:.5rem;padding:1rem 2rem}
+.pagination .btn{min-width:32px;text-align:center}
+.pagination .page-info{font-size:.8rem;color:#888}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:1000}
+.modal-overlay.active{display:flex}
+.modal{background:#151515;border:1px solid #333;border-radius:12px;padding:2rem;max-width:500px;width:90%;text-align:center}
+.modal h3{color:#fff;margin-bottom:1rem}
+.modal p{color:#999;font-size:.85rem;margin-bottom:1.5rem}
+.modal-actions{display:flex;gap:.5rem;justify-content:center}
+
+/* Toast */
+.toast{position:fixed;bottom:2rem;right:2rem;background:#22c55e;color:#fff;padding:.75rem 1.25rem;border-radius:8px;font-size:.8rem;font-weight:600;opacity:0;transform:translateY(10px);transition:all .3s;z-index:2000;pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:900px){
+  .dashboard{grid-template-columns:1fr 1fr;gap:.75rem;padding:1rem}
+  .header,.controls,.table-wrap,.templates-panel,.progress-section,.pagination{padding-left:1rem;padding-right:1rem}
+  .search-input{width:100%}
+  .controls{gap:.5rem}
+}
+@media(max-width:600px){
+  .dashboard{grid-template-columns:1fr;gap:.5rem}
+  .header{flex-direction:column;align-items:flex-start}
+  .header-actions{width:100%}
+  .header-actions .btn{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Reset confirmation modal -->
+<div class="modal-overlay" id="resetModal">
+  <div class="modal">
+    <h3>Reset All Data?</h3>
+    <p>This will delete all outreach data from localStorage. This cannot be undone. Make sure you export first!</p>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-danger" onclick="confirmReset()">Yes, Reset Everything</button>
+    </div>
+  </div>
+</div>
+
+<!-- IMPORT SCREEN -->
+<div id="importScreen" class="import-panel">
+  <h2>AHK Outreach Tracker</h2>
+  <p>Load your AHK member directory JSON to get started. Data is stored locally in your browser.</p>
+  <div class="file-drop" id="fileDrop" onclick="document.getElementById('fileInput').click()">
+    <p style="color:#666;font-size:.9rem">Drop <code>ahk-members.json</code> here<br>or click to browse</p>
+  </div>
+  <input type="file" id="fileInput" accept=".json">
+</div>
+
+<!-- MAIN APP (hidden until data loaded) -->
+<div id="mainApp" style="display:none">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>AHK Outreach Tracker <span>KurthTechnik</span></h1>
+    <div class="header-actions">
+      <button class="btn" onclick="exportData()">Export JSON</button>
+      <button class="btn btn-danger btn-sm" onclick="showResetModal()">Reset</button>
+    </div>
+  </div>
+
+  <!-- Dashboard stats -->
+  <div class="dashboard">
+    <div class="stat-card">
+      <div class="label">Total</div>
+      <div class="value" id="statTotal">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Contacted</div>
+      <div class="value blue" id="statContacted">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Replied</div>
+      <div class="value green" id="statReplied">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Remaining</div>
+      <div class="value amber" id="statRemaining">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Streak</div>
+      <div class="value red" id="statStreak">
+        <span class="streak-badge" id="streakBadge">0 days</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daily progress -->
+  <div class="progress-section">
+    <div class="progress-header">
+      <span>Today's Outreach</span>
+      <strong id="progressText">0 / 30</strong>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" data-tab="table" onclick="switchTab('table')">Members</button>
+    <button class="tab" data-tab="templates" onclick="switchTab('templates')">Email Templates</button>
+  </div>
+
+  <!-- TABLE VIEW -->
+  <div id="tableView">
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search company or location...">
+      <select class="filter-select" id="statusFilter">
+        <option value="">All Statuses</option>
+        <option value="new">New</option>
+        <option value="researched">Researched</option>
+        <option value="emailed">Emailed</option>
+        <option value="followed-up">Followed Up</option>
+        <option value="replied">Replied</option>
+        <option value="meeting">Meeting</option>
+        <option value="closed">Closed</option>
+        <option value="skip">Skip</option>
+      </select>
+      <select class="filter-select" id="locationFilter">
+        <option value="">All Locations</option>
+        <option value="HK">Hong Kong</option>
+        <option value="Germany">Germany</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="spacer"></div>
+      <span style="font-size:.75rem;color:#666" id="resultCount">0 results</span>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="company">Company <span class="sort-arrow"></span></th>
+            <th data-sort="location">Location <span class="sort-arrow"></span></th>
+            <th data-sort="status">Status <span class="sort-arrow"></span></th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th data-sort="lastAction">Last Action <span class="sort-arrow"></span></th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="btn btn-sm" onclick="goToPage(1)">&laquo;</button>
+      <button class="btn btn-sm" onclick="goToPage(currentPage-1)">&lsaquo;</button>
+      <span class="page-info" id="pageInfo">1 / 1</span>
+      <button class="btn btn-sm" onclick="goToPage(currentPage+1)">&rsaquo;</button>
+      <button class="btn btn-sm" onclick="goToPage(totalPages)">&raquo;</button>
+    </div>
+  </div>
+
+  <!-- TEMPLATES VIEW -->
+  <div id="templatesView" class="templates-panel">
+    <div class="template-card" id="tpl-intro">
+      <h3>Intro Email <button class="btn btn-sm" onclick="copyTemplate('intro')">Copy</button></h3>
+      <textarea id="tplIntro">Subject: Connecting via AHK Hong Kong — KurthTechnik
+
+Dear {{contact}},
+
+I came across {{company}} through the AHK Hong Kong member directory and wanted to reach out.
+
+I'm Daniel Kurth, founder of KurthTechnik — we help companies bridge the gap between German engineering and Asian manufacturing through digital solutions and process optimization.
+
+I'd love to learn more about {{company}}'s operations and explore potential synergies. Would you be open to a brief call or coffee chat?
+
+Best regards,
+Daniel Kurth
+KurthTechnik | hello@kurthtechnik.de</textarea>
+    </div>
+    <div class="template-card" id="tpl-followup">
+      <h3>Follow-Up <button class="btn btn-sm" onclick="copyTemplate('followup')">Copy</button></h3>
+      <textarea id="tplFollowup">Subject: Following up — KurthTechnik x {{company}}
+
+Dear {{contact}},
+
+I wanted to follow up on my previous email. I understand things get busy, so I'll keep this brief.
+
+At KurthTechnik, we specialize in helping AHK member companies streamline their cross-border operations. I believe there could be a great fit with {{company}}.
+
+Would 15 minutes this week work for a quick intro call?
+
+Best regards,
+Daniel Kurth
+KurthTechnik | hello@kurthtechnik.de</textarea>
+    </div>
+    <div class="template-card" id="tpl-meeting">
+      <h3>Meeting Request <button class="btn btn-sm" onclick="copyTemplate('meeting')">Copy</button></h3>
+      <textarea id="tplMeeting">Subject: Meeting request — KurthTechnik x {{company}}
+
+Dear {{contact}},
+
+Thank you for your interest in connecting! I'd love to schedule a meeting to discuss how KurthTechnik can support {{company}}.
+
+I'm flexible with timing — would any of the following work for you?
+- [Option 1]
+- [Option 2]
+- [Option 3]
+
+Looking forward to it!
+
+Best regards,
+Daniel Kurth
+KurthTechnik | hello@kurthtechnik.de</textarea>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const STORAGE_KEY = 'ahk-outreach-data';
+const DAILY_GOAL = 30;
+const PAGE_SIZE = 50;
+
+let members = [];
+let dailyLog = {}; // { "2026-04-14": ["emailed","emailed",...] }
+let streak = 0;
+let currentPage = 1;
+let totalPages = 1;
+let sortCol = 'company';
+let sortAsc = true;
+let selectedCompanyForTemplate = null;
+
+// ============================================================
+// INIT
+// ============================================================
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try {
+      const data = JSON.parse(saved);
+      members = data.members || [];
+      dailyLog = data.dailyLog || {};
+      loadTemplatesFromStorage(data.templates);
+      showApp();
+    } catch (e) {
+      console.error('Failed to load saved data', e);
+      showImport();
+    }
+  } else {
+    showImport();
+  }
+  setupImport();
+  setupSearch();
+  setupSort();
+});
+
+function showImport() {
+  document.getElementById('importScreen').style.display = 'flex';
+  document.getElementById('mainApp').style.display = 'none';
+}
+
+function showApp() {
+  document.getElementById('importScreen').style.display = 'none';
+  document.getElementById('mainApp').style.display = 'block';
+  updateDashboard();
+  renderTable();
+}
+
+// ============================================================
+// IMPORT
+// ============================================================
+function setupImport() {
+  const fileInput = document.getElementById('fileInput');
+  const fileDrop = document.getElementById('fileDrop');
+
+  fileInput.addEventListener('change', e => {
+    if (e.target.files[0]) loadFile(e.target.files[0]);
+  });
+
+  fileDrop.addEventListener('dragover', e => {
+    e.preventDefault();
+    fileDrop.classList.add('dragover');
+  });
+  fileDrop.addEventListener('dragleave', () => fileDrop.classList.remove('dragover'));
+  fileDrop.addEventListener('drop', e => {
+    e.preventDefault();
+    fileDrop.classList.remove('dragover');
+    if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+  });
+}
+
+function loadFile(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const json = JSON.parse(e.target.result);
+      if (json.members && Array.isArray(json.members)) {
+        members = json.members;
+        dailyLog = {};
+        saveData();
+        showApp();
+        toast(`Loaded ${members.length} members`);
+      } else {
+        alert('Invalid JSON: missing "members" array');
+      }
+    } catch (err) {
+      alert('Failed to parse JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ============================================================
+// PERSISTENCE
+// ============================================================
+function saveData() {
+  const data = {
+    members,
+    dailyLog,
+    templates: {
+      intro: document.getElementById('tplIntro').value,
+      followup: document.getElementById('tplFollowup').value,
+      meeting: document.getElementById('tplMeeting').value
+    }
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadTemplatesFromStorage(templates) {
+  if (!templates) return;
+  if (templates.intro) document.getElementById('tplIntro').value = templates.intro;
+  if (templates.followup) document.getElementById('tplFollowup').value = templates.followup;
+  if (templates.meeting) document.getElementById('tplMeeting').value = templates.meeting;
+}
+
+function exportData() {
+  const data = {
+    meta: {
+      exported: new Date().toISOString(),
+      tool: 'AHK Outreach Tracker — KurthTechnik'
+    },
+    members,
+    dailyLog
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `ahk-outreach-${todayStr()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('Export downloaded');
+}
+
+// ============================================================
+// DASHBOARD
+// ============================================================
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function updateDashboard() {
+  const total = members.length;
+  const contacted = members.filter(m => ['emailed','followed-up','replied','meeting','closed'].includes(m.status)).length;
+  const replied = members.filter(m => ['replied','meeting','closed'].includes(m.status)).length;
+  const remaining = members.filter(m => ['new','researched'].includes(m.status)).length;
+
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statContacted').textContent = contacted;
+  document.getElementById('statReplied').textContent = replied;
+  document.getElementById('statRemaining').textContent = remaining;
+
+  // Today's progress
+  const today = todayStr();
+  const todayCount = (dailyLog[today] || []).length;
+  const pct = Math.min(100, Math.round((todayCount / DAILY_GOAL) * 100));
+  document.getElementById('progressText').textContent = `${todayCount} / ${DAILY_GOAL}`;
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  // Streak
+  streak = calcStreak();
+  document.getElementById('streakBadge').textContent = streak + (streak === 1 ? ' day' : ' days');
+}
+
+function calcStreak() {
+  let s = 0;
+  const d = new Date();
+  // Check if today already qualifies
+  const todayKey = todayStr();
+  const todayActions = (dailyLog[todayKey] || []).length;
+  // If today has not reached goal yet, start checking from yesterday
+  if (todayActions < DAILY_GOAL) {
+    d.setDate(d.getDate() - 1);
+  }
+  while (true) {
+    const key = d.toISOString().slice(0, 10);
+    if ((dailyLog[key] || []).length >= DAILY_GOAL) {
+      s++;
+      d.setDate(d.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+  return s;
+}
+
+// ============================================================
+// TABLE
+// ============================================================
+function getFilteredMembers() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const statusF = document.getElementById('statusFilter').value;
+  const locF = document.getElementById('locationFilter').value;
+
+  return members.filter(m => {
+    if (search && !m.company.toLowerCase().includes(search) && !m.location.toLowerCase().includes(search)) return false;
+    if (statusF && m.status !== statusF) return false;
+    if (locF === 'HK' && !m.location.includes('HK')) return false;
+    if (locF === 'Germany' && !m.location.includes('Germany')) return false;
+    if (locF === 'Other' && (m.location.includes('HK') || m.location.includes('Germany'))) return false;
+    return true;
+  });
+}
+
+function sortMembers(list) {
+  return [...list].sort((a, b) => {
+    let va = a[sortCol] || '';
+    let vb = b[sortCol] || '';
+    if (typeof va === 'string') va = va.toLowerCase();
+    if (typeof vb === 'string') vb = vb.toLowerCase();
+    if (va < vb) return sortAsc ? -1 : 1;
+    if (va > vb) return sortAsc ? 1 : -1;
+    return 0;
+  });
+}
+
+function renderTable() {
+  const filtered = sortMembers(getFilteredMembers());
+  totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  if (currentPage > totalPages) currentPage = totalPages;
+
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page = filtered.slice(start, start + PAGE_SIZE);
+
+  document.getElementById('resultCount').textContent = filtered.length + ' results';
+  document.getElementById('pageInfo').textContent = `${currentPage} / ${totalPages}`;
+
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = page.map(m => `
+    <tr data-id="${m.id}">
+      <td class="company" title="${esc(m.company)}">${esc(m.company)}</td>
+      <td class="location" title="${esc(m.location)}">${esc(m.location)}</td>
+      <td>
+        <select class="status-select" onchange="changeStatus(${m.id}, this.value)">
+          ${['new','researched','emailed','followed-up','replied','meeting','closed','skip'].map(s =>
+            `<option value="${s}" ${m.status===s?'selected':''}>${s}</option>`
+          ).join('')}
+        </select>
+      </td>
+      <td><input class="editable" value="${esc(m.contact)}" placeholder="—" onchange="updateField(${m.id},'contact',this.value)"></td>
+      <td><input class="editable" value="${esc(m.email)}" placeholder="—" onchange="updateField(${m.id},'email',this.value)"></td>
+      <td style="font-size:.72rem;color:#666;white-space:nowrap">${esc(m.lastAction)}</td>
+      <td>
+        <div class="action-btns">
+          <button class="btn btn-sm" onclick="useTemplate(${m.id})" title="Copy email template">Mail</button>
+          <button class="btn btn-sm" onclick="addNote(${m.id})" title="Edit notes">Notes</button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+
+  // Update sort arrows
+  document.querySelectorAll('thead th').forEach(th => {
+    const arrow = th.querySelector('.sort-arrow');
+    if (!arrow) return;
+    const col = th.dataset.sort;
+    arrow.textContent = col === sortCol ? (sortAsc ? '▲' : '▼') : '';
+  });
+}
+
+function esc(str) {
+  if (!str) return '';
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ============================================================
+// TABLE ACTIONS
+// ============================================================
+function changeStatus(id, newStatus) {
+  const m = members.find(x => x.id === id);
+  if (!m) return;
+  const oldStatus = m.status;
+  m.status = newStatus;
+  m.lastAction = todayStr() + ' → ' + newStatus;
+
+  // Log to daily count if it's a progression action
+  if (oldStatus !== newStatus && ['emailed','followed-up','replied','meeting','closed'].includes(newStatus)) {
+    const today = todayStr();
+    if (!dailyLog[today]) dailyLog[today] = [];
+    dailyLog[today].push(newStatus);
+  }
+
+  saveData();
+  updateDashboard();
+  renderTable();
+  toast(`${m.company} → ${newStatus}`);
+}
+
+function updateField(id, field, value) {
+  const m = members.find(x => x.id === id);
+  if (!m) return;
+  m[field] = value;
+  saveData();
+}
+
+function addNote(id) {
+  const m = members.find(x => x.id === id);
+  if (!m) return;
+  const note = prompt(`Notes for ${m.company}:`, m.notes || '');
+  if (note !== null) {
+    m.notes = note;
+    saveData();
+    toast('Note saved');
+  }
+}
+
+// ============================================================
+// TEMPLATES
+// ============================================================
+function useTemplate(id) {
+  selectedCompanyForTemplate = members.find(x => x.id === id);
+  switchTab('templates');
+  toast(`Templates ready for ${selectedCompanyForTemplate.company} — click Copy`);
+}
+
+function copyTemplate(type) {
+  let tpl;
+  if (type === 'intro') tpl = document.getElementById('tplIntro').value;
+  else if (type === 'followup') tpl = document.getElementById('tplFollowup').value;
+  else tpl = document.getElementById('tplMeeting').value;
+
+  if (selectedCompanyForTemplate) {
+    tpl = tpl.replace(/\{\{company\}\}/g, selectedCompanyForTemplate.company);
+    tpl = tpl.replace(/\{\{contact\}\}/g, selectedCompanyForTemplate.contact || '[Name]');
+  }
+
+  navigator.clipboard.writeText(tpl).then(() => {
+    toast('Copied to clipboard!');
+    saveData(); // save any template edits
+  }).catch(() => {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = tpl;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    toast('Copied to clipboard!');
+    saveData();
+  });
+}
+
+// ============================================================
+// TABS
+// ============================================================
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  document.getElementById('tableView').style.display = tab === 'table' ? 'block' : 'none';
+  document.getElementById('templatesView').classList.toggle('active', tab === 'templates');
+}
+
+// ============================================================
+// SEARCH, FILTER, SORT
+// ============================================================
+function setupSearch() {
+  let timer;
+  document.getElementById('searchInput').addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { currentPage = 1; renderTable(); }, 200);
+  });
+  document.getElementById('statusFilter').addEventListener('change', () => { currentPage = 1; renderTable(); });
+  document.getElementById('locationFilter').addEventListener('change', () => { currentPage = 1; renderTable(); });
+}
+
+function setupSort() {
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.sort;
+      if (sortCol === col) sortAsc = !sortAsc;
+      else { sortCol = col; sortAsc = true; }
+      renderTable();
+    });
+  });
+}
+
+function goToPage(p) {
+  if (p < 1 || p > totalPages) return;
+  currentPage = p;
+  renderTable();
+}
+
+// ============================================================
+// RESET
+// ============================================================
+function showResetModal() {
+  document.getElementById('resetModal').classList.add('active');
+}
+function closeModal() {
+  document.getElementById('resetModal').classList.remove('active');
+}
+function confirmReset() {
+  localStorage.removeItem(STORAGE_KEY);
+  members = [];
+  dailyLog = {};
+  closeModal();
+  showImport();
+  toast('All data reset');
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

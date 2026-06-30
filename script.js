@@ -96,25 +96,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Language toggle
+    // Language toggle (EN / DE / 中文)
     function setLanguage(lang) {
-        document.querySelectorAll('[data-en][data-de]').forEach(el => {
-            el.innerHTML = el.getAttribute('data-' + lang);
+        document.querySelectorAll('[data-en]').forEach(el => {
+            var text = el.getAttribute('data-' + lang);
+            if (text === null) text = el.getAttribute('data-en');
+            el.innerHTML = text;
+        });
+        // Block-based language switching (impressum, privacy pages)
+        ['en', 'de', 'zh'].forEach(function(l) {
+            var block = document.querySelector('[data-' + l + '-block]');
+            if (block) block.style.display = (l === lang) ? '' : 'none';
         });
         document.querySelectorAll('.lang-toggle button').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
-        const titleEn = document.documentElement.getAttribute('data-title-en');
-        const titleDe = document.documentElement.getAttribute('data-title-de');
-        if (titleEn && titleDe) {
-            document.title = lang === 'en' ? titleEn : titleDe;
-        }
-        document.documentElement.lang = lang;
+        var title = document.documentElement.getAttribute('data-title-' + lang)
+            || document.documentElement.getAttribute('data-title-en');
+        if (title) document.title = title;
+        var langMap = { en: 'en', de: 'de', zh: 'zh-Hans' };
+        document.documentElement.lang = langMap[lang] || 'en';
         localStorage.setItem('lang', lang);
     }
 
-    const defaultLang = document.documentElement.lang === 'de' ? 'de' : 'en';
-    const savedLang = localStorage.getItem('lang') || defaultLang;
+    var defaultLang = 'en';
+    var savedLang = localStorage.getItem('lang') || defaultLang;
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === savedLang);
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
